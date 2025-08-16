@@ -26,7 +26,7 @@ export default function Navbar() {
                     {
                         pages.map((data, index) => {
                             return (
-                                <div key={index} onClick={() => navigate(data.path)} className={`cursor-default relative inline-block transition-all active:scale-95 hover:text-cyan-700 ${location.pathname == data.path ? 'text-cyan-700' : ''}`}>
+                                <div key={index} onClick={() => navigate(data.path)} className={`cursor-default relative inline-block transition-all active:scale-95 hover:primary-text ${location.pathname == data.path ? 'primary-text' : ''}`}>
                                     {data.text}
                                 </div>
                             )
@@ -43,7 +43,7 @@ export default function Navbar() {
                         {
                             pages.map((data, index) => {
                                 return (
-                                    <div key={index} onClick={() => navigate(data.path)} className={`cursor-default relative transition-all active:scale-95 hover:text-cyan-700 ${location.pathname == data.path ? 'text-cyan-700' : ''}`}>
+                                    <div key={index} onClick={() => navigate(data.path)} className={`cursor-default relative transition-all active:scale-95 hover:primary-text ${location.pathname == data.path ? 'primary-text' : ''}`}>
                                         {data.text}
                                     </div>
                                 )

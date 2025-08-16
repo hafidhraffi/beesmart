@@ -7,3 +7,15 @@
 .scrollbar-hide::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Opera */
 }
+
+.primary-bg {
+  background-color: #017d9e;
+}
+
+.primary-text {
+  color: #017d9e;
+}
+
+.primary-border {
+  border-color: #017d9e;
+}

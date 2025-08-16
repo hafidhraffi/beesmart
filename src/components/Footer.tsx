@@ -6,7 +6,7 @@ import InstaIcon from '../assets/ig_icon.png'
 function Footer() {
     return (
         <>
-            <div className="w-full pt-10 pb-5 bg-cyan-700 text-white justify-center flex">
+            <div className="w-full pt-10 pb-5 primary-bg text-white justify-center flex">
                 <div className="px-5 sm:px-20 w-[1280px] flex flex-col gap-20">
                     <div className="grid max-sm:grid-cols-1 max-lg:grid-cols-2 grid-cols-3 gap-20">
                         <div className="flex flex-col gap-2">
