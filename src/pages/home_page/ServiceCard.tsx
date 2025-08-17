@@ -4,11 +4,11 @@ function ServiceCard({ img, title, list }: { img: string; title: string; list: s
 
     return (
         <div className='flex justify-center'>
-            <div className='h-fit w-fit min-h-50 rounded-2xl primary-bg flex gap-14 max-lg:gap-3 max-md:gap-14 max-sm:gap-3'>
+            <div className='h-fit w-fit min-h-50 rounded-2xl bg-[#017d9e] flex gap-14 max-lg:gap-3 max-md:gap-14 max-sm:gap-3'>
                 <div className='flex flex-col justify-between gap-5 p-3'>
                     <div className='flex flex-col gap-2'>
                         <p className='font-bold text-xl'>{title}</p>
-                        <ul className='list-disc pl-5'>
+                        <ul data-aos='fade-down' className='list-disc pl-5'>
                             {
                                 list.map((element, index) => {
                                     return (
@@ -18,7 +18,7 @@ function ServiceCard({ img, title, list }: { img: string; title: string; list: s
                             }
                         </ul>
                     </div>
-                    <div className='flex bg-white rounded-full w-fit py-2 px-3 primary-text items-center gap-2'>
+                    <div className='flex bg-white rounded-full w-fit py-2 px-3 text-[#017d9e] items-center gap-2 cursor-pointer active:scale-95 hover:shadow hover:shadow-white transition-all'>
                         <p>Detail</p>
                         <ArrowRightIcon className='h-5' />
                     </div>

@@ -26,7 +26,7 @@ export default function Navbar() {
                     {
                         pages.map((data, index) => {
                             return (
-                                <div key={index} onClick={() => navigate(data.path)} className={`cursor-default relative inline-block transition-all active:scale-95 hover:primary-text ${location.pathname == data.path ? 'primary-text' : ''}`}>
+                                <div key={index} onClick={() => navigate(data.path)} className={`cursor-pointer relative inline-block transition-all active:scale-95 hover:text-[#017d9e] ${location.pathname == data.path ? 'text-[#017d9e]' : ''}`}>
                                     {data.text}
                                 </div>
                             )
@@ -43,7 +43,7 @@ export default function Navbar() {
                         {
                             pages.map((data, index) => {
                                 return (
-                                    <div key={index} onClick={() => navigate(data.path)} className={`cursor-default relative transition-all active:scale-95 hover:primary-text ${location.pathname == data.path ? 'primary-text' : ''}`}>
+                                    <div key={index} onClick={() => navigate(data.path)} className={`cursor-pointer relative transition-all active:scale-95 hover:text-[#017d9e] ${location.pathname == data.path ? 'text-[#017d9e]' : ''}`}>
                                         {data.text}
                                     </div>
                                 )

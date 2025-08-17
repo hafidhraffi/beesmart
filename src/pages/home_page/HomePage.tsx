@@ -68,7 +68,7 @@ function HomePage() {
                         </div>
                         <div className="w-full flex justify-center">
                             <div className="px-5 sm:px-20 w-[1280px]">
-                                <div className='flex flex-col h-[730px] items-center justify-center gap-5'>
+                                <div data-aos='fade-in' className='flex flex-col h-[730px] items-center justify-center gap-5'>
                                     <p className='text-white text-6xl max-sm:text-2xl max-md:text-3xl max-lg:text-4xl font-semibold text-center'>
                                         Cari Partner Desain & Cetak Untuk Instansi, Perusahaan dan Bisnis Anda?
                                     </p>
@@ -80,14 +80,14 @@ function HomePage() {
                         </div>
                         <div className="w-full flex justify-center bg-white">
                             <div className="px-5 sm:px-20 w-[1280px]">
-                                <div className='flex gap-10 py-20 items-center max-lg:flex-col'>
+                                <div data-aos="fade-up" className='flex gap-10 py-20 items-center max-lg:flex-col'>
                                     <div className='flex flex-col gap-10'>
                                         <p className='text-xl'>
                                             <span className='font-bold'>Beesmart </span>
                                             siap membantu anda
                                         </p>
                                         <p className='text-base text-justify'>CV. Beesmart Solusi Media adalah perusahaan Kreatif di bidang desain dan cetak yang telah berdiri sejak tahun 2015. Lebih dari 10 tahun berpengalaman menyelesaikan project-project besar kebutuhan desain dan cetak berbagai instansi dan perusahaan.</p>
-                                        <div className='flex primary-bg rounded-full w-fit py-2 px-3 text-white items-center gap-2'>
+                                        <div className='flex bg-[#017d9e] rounded-full w-fit py-2 px-3 text-white items-center gap-2 cursor-pointer active:scale-95 hover:shadow-[#017d9e] hover:shadow transition-all'>
                                             <p>Tentang Kami</p>
                                             <ArrowRightIcon className='h-5' />
                                         </div>
@@ -148,7 +148,7 @@ function HomePage() {
                                         />
                                     </div>
                                 </div>
-                                <div className='flex flex-col py-20 items-center gap-10'>
+                                <div className='flex flex-col pb-20 items-center gap-10'>
                                     <p className='font-bold text-2xl'>Portofolio</p>
                                     <div className='grid grid-cols-4 max-lg:grid-cols-3 max-md:grid-cols-2 gap-5'>
                                         {
@@ -160,14 +160,14 @@ function HomePage() {
                                         }
                                     </div>
                                 </div>
-                                <div className='flex flex-col py-20 items-center max-lg:flex-col gap-5'>
+                                <div className='flex flex-col pb-20 items-center max-lg:flex-col gap-5'>
                                     <p className='font-bold text-2xl'>Testimoni</p>
                                     <p className='text-base text-justify'>Dengarkan Apa Kata Klien Kami</p>
                                     <div className='grid grid-cols-3 max-lg:grid-cols-2 max-md:grid-cols-1 gap-10'>
                                         {
                                             data.testimoni.map((element, index) => {
                                                 return (
-                                                    <TestimonialCard key={index} profilePic={element.foto_url} rating={element.bintang} username={element.nama} timeDesc={element.waktu} testimonialDesc={element.isi} />
+                                                    <TestimonialCard key={index} profilePic={element.foto_url} rating={element.bintang} username={element.nama} timeDesc={element.waktu} testimonialDesc={element.isi} link={element.link} />
                                                 )
                                             })
                                         }
