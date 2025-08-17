@@ -5,6 +5,8 @@ import { createBrowserRouter, RouterProvider, } from "react-router";
 import Layout from './layout';
 import HomePage from './pages/home_page/HomePage';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import LoginPage from './pages/login_page/LoginPage';
+import DashboardPage from './pages/dashboard_page/DashboardPage';
 
 const router = createBrowserRouter([
   {
@@ -16,18 +18,14 @@ const router = createBrowserRouter([
       // { path: "products", element: <ProductsPage /> },
     ],
   },
-  // {
-  //   path: "/terms-and-conditions",
-  //   element: <UnderDevPage />,
-  // },
-  // {
-  //   path: "/privacy-and-security",
-  //   element: <UnderDevPage />,
-  // },
-  // {
-  //   path: "/other-informations",
-  //   element: <UnderDevPage />,
-  // },
+  {
+    path: "/login",
+    element: <LoginPage />,
+  },
+  {
+    path: "/dashboard",
+    element: <DashboardPage />,
+  },
   // {
   //   path: "/*",
   //   element: <NotFound />,

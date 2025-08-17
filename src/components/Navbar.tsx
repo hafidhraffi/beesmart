@@ -10,9 +10,9 @@ export default function Navbar() {
     const pages = [
         { path: "/", text: "Beranda", },
         { path: "/about", text: "Tentang Kami", },
-        { path: "/products", text: "Blog", },
-        { path: "/products", text: "Portofolio", },
-        { path: "/products", text: "Kontak", },
+        { path: "/Blog", text: "Blog", },
+        { path: "/Portofolio", text: "Portofolio", },
+        { path: "/Kontak", text: "Kontak", },
     ]
 
     return (
@@ -25,11 +25,19 @@ export default function Navbar() {
                 <div className='flex flex-col gap-5 mx-7'>
                     {
                         pages.map((data, index) => {
-                            return (
-                                <div key={index} onClick={() => navigate(data.path)} className={`cursor-pointer relative inline-block transition-all active:scale-95 hover:text-[#017d9e] ${location.pathname == data.path ? 'text-[#017d9e]' : ''}`}>
-                                    {data.text}
-                                </div>
-                            )
+                            if (data.text === "Blog") {
+                                return (
+                                    <a key={index} href='http://beesmart-sm.vercel.app/blog' className={`cursor-pointer relative inline-block transition-all active:scale-95 hover:text-[#017d9e] ${location.pathname == data.path ? 'text-[#017d9e]' : ''}`}>
+                                        {data.text}
+                                    </a>
+                                )
+                            } else {
+                                return (
+                                    <div key={index} onClick={() => navigate(data.path)} className={`cursor-pointer relative inline-block transition-all active:scale-95 hover:text-[#017d9e] ${location.pathname == data.path ? 'text-[#017d9e]' : ''}`}>
+                                        {data.text}
+                                    </div>
+                                )
+                            }
                         })
                     }
                 </div>
@@ -42,11 +50,19 @@ export default function Navbar() {
                     <div className="hidden lg:flex gap-9 h-full items-center">
                         {
                             pages.map((data, index) => {
-                                return (
-                                    <div key={index} onClick={() => navigate(data.path)} className={`cursor-pointer relative transition-all active:scale-95 hover:text-[#017d9e] ${location.pathname == data.path ? 'text-[#017d9e]' : ''}`}>
-                                        {data.text}
-                                    </div>
-                                )
+                                if (data.text === "Blog") {
+                                    return (
+                                        <a key={index} href='http://beesmart-sm.vercel.app/blog' className={`cursor-pointer relative transition-all active:scale-95 hover:text-[#017d9e] ${location.pathname == data.path ? 'text-[#017d9e]' : ''}`}>
+                                            {data.text}
+                                        </a>
+                                    )
+                                } else {
+                                    return (
+                                        <div key={index} onClick={() => navigate(data.path)} className={`cursor-pointer relative transition-all active:scale-95 hover:text-[#017d9e] ${location.pathname == data.path ? 'text-[#017d9e]' : ''}`}>
+                                            {data.text}
+                                        </div>
+                                    )
+                                }
                             })
                         }
                     </div>
