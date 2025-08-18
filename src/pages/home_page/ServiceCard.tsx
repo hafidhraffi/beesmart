@@ -4,7 +4,7 @@ function ServiceCard({ img, title, list }: { img: string; title: string; list: s
 
     return (
         <div className='flex justify-center'>
-            <div className='h-fit w-fit min-h-50 rounded-2xl bg-[#017d9e] flex gap-14 max-lg:gap-3 max-md:gap-14 max-sm:gap-3'>
+            <div className='h-fit w-[450px] min-h-50 rounded-2xl bg-[#017d9e] flex justify-between gap-14 max-lg:gap-3 max-md:gap-14 max-sm:gap-3 overflow-hidden'>
                 <div className='flex flex-col justify-between gap-5 p-3'>
                     <div className='flex flex-col gap-2'>
                         <p className='font-bold text-xl'>{title}</p>
@@ -23,7 +23,7 @@ function ServiceCard({ img, title, list }: { img: string; title: string; list: s
                         <ArrowRightIcon className='h-5' />
                     </div>
                 </div>
-                <img src={img} className='h-60 scale-110 max-lg:h-50' />
+                <img src={img} className="min-h-50 h-60 scale-105" />
             </div>
         </div>
     )

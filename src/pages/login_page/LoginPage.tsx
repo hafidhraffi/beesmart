@@ -27,13 +27,15 @@ function LoginPage() {
         try {
             const res = await axios.post("https://beesmart-sm.vercel.app/login", data);
 
-            if (res.data.message === "Login successful")
+            if (res.status === 200) {
+                localStorage.setItem("token", res.data.token);
                 navigate("/dashboard");
+            }
 
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
         } catch (error: any) {
             console.error("Login error:", error);
-            setServerError(error.response?.data?.error || "Login failed");
+            setServerError(error.response?.data?.message || "Login failed");
         }
     };
 
@@ -55,7 +57,7 @@ function LoginPage() {
                         </div>
                     </div>
                     <form
-                        id="form"
+                        id="login_form"
                         onSubmit={handleSubmit(onSubmit)}
                         className='my-auto'
                     >

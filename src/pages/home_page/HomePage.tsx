@@ -7,8 +7,6 @@ import QualityIcon from '../../assets/quality.png'
 import OnestopIcon from '../../assets/onestop.png'
 import BookImage from '../../assets/book.png'
 import CalendarImage from '../../assets/calendar.png'
-import ClientsImage from '../../assets/clients.png'
-import { useRef, useState } from 'react'
 import SellingPointCard from './SellingPointCard'
 import ServiceCard from './ServiceCard'
 import AchievementPoint from './AchievementPoint'
@@ -17,6 +15,7 @@ import TestimonialCard from './TestimonialCard'
 import api from '../../services/api'
 import { useQuery } from '@tanstack/react-query'
 import type { HomePageData } from '../../types/homePageData'
+import ClientCarousel from './ClientCarousel'
 
 function HomePage() {
     const fetchHomePageData = async (): Promise<HomePageData> => {
@@ -29,34 +28,6 @@ function HomePage() {
         queryFn: fetchHomePageData,
     })
 
-    const scrollRef = useRef<HTMLDivElement>(null);
-    const [isDown, setIsDown] = useState(false);
-    const [startX, setStartX] = useState(0);
-    const [scrollLeft, setScrollLeft] = useState(0);
-
-    const handleMouseDown = (e: React.MouseEvent) => {
-        setIsDown(true);
-        setStartX(e.pageX - (scrollRef.current?.offsetLeft || 0));
-        setScrollLeft(scrollRef.current?.scrollLeft || 0);
-    };
-
-    const handleMouseLeave = () => {
-        setIsDown(false);
-    }
-    const handleMouseUp = () => {
-        setIsDown(false);
-    }
-
-    const handleMouseMove = (e: React.MouseEvent) => {
-        if (!isDown) return;
-        e.preventDefault();
-        const x = e.pageX - (scrollRef.current?.offsetLeft || 0);
-        const walk = (x - startX) * 1;
-        if (scrollRef.current) {
-            scrollRef.current.scrollLeft = scrollLeft - walk;
-        }
-    };
-
     return (
         <>
             {
@@ -67,7 +38,7 @@ function HomePage() {
                             <img src={HomepageBanner} className='min-w-[1480px] w-screen' />
                         </div>
                         <div className="w-full flex justify-center">
-                            <div className="px-5 sm:px-20 w-[1280px]">
+                            <div className="px-5 sm:px-20 w-[1480px]">
                                 <div data-aos='fade-in' className='flex flex-col h-[730px] items-center justify-center gap-5'>
                                     <p className='text-white text-6xl max-sm:text-2xl max-md:text-3xl max-lg:text-4xl font-semibold text-center'>
                                         Cari Partner Desain & Cetak Untuk Instansi, Perusahaan dan Bisnis Anda?
@@ -79,13 +50,13 @@ function HomePage() {
                             </div>
                         </div>
                         <div className="w-full flex justify-center bg-white">
-                            <div className="px-5 sm:px-20 w-[1280px]">
-                                <div data-aos="fade-up" className='flex gap-10 py-20 items-center max-lg:flex-col'>
+                            <div className="px-5 sm:px-20 w-[1480px]">
+                                <div data-aos="fade-up" className='flex max-lg:gap-10 gap-20 py-20 items-center max-lg:flex-col'>
                                     <div className='flex flex-col gap-10'>
-                                        <p className='text-xl'>
-                                            <span className='font-bold'>Beesmart </span>
-                                            siap membantu anda
-                                        </p>
+                                        <div>
+                                            <p className='font-bold text-xl'>Beesmart </p>
+                                            <p className='text-xl'>Siap membantu anda</p>
+                                        </div>
                                         <p className='text-base text-justify'>CV. Beesmart Solusi Media adalah perusahaan Kreatif di bidang desain dan cetak yang telah berdiri sejak tahun 2015. Lebih dari 10 tahun berpengalaman menyelesaikan project-project besar kebutuhan desain dan cetak berbagai instansi dan perusahaan.</p>
                                         <div className='flex bg-[#017d9e] rounded-full w-fit py-2 px-3 text-white items-center gap-2 cursor-pointer active:scale-95 hover:shadow-[#017d9e] hover:shadow transition-all'>
                                             <p>Tentang Kami</p>
@@ -115,8 +86,8 @@ function HomePage() {
                                 </div>
                             </div>
                         </div>
-                        <div className="w-full flex justify-center">
-                            <div className="px-5 sm:px-20 w-[1280px]">
+                        <div className="w-full flex justify-center bg-[#017d9e]">
+                            <div className="px-5 sm:px-20 w-[1480px]">
                                 <div className='flex flex-col py-20 items-center max-lg:flex-col gap-5 text-white'>
                                     <p className='font-bold text-2xl'>Pencapaian Kami</p>
                                     <p className='text-base text-justify'>Berikut Pencapaian Kami Dari Awal Berdiri Hingga Saat Ini</p>
@@ -129,24 +100,11 @@ function HomePage() {
                             </div>
                         </div>
                         <div className="w-full flex justify-center bg-white">
-                            <div className="px-5 sm:px-20 w-[1280px]">
+                            <div className="px-5 sm:px-20 w-[1480px]">
                                 <div className='flex flex-col py-20 items-center max-lg:flex-col gap-5'>
                                     <p className='font-bold text-2xl'>Klien Kami</p>
                                     <p className='text-base text-justify'>Dipercaya Oleh 50+ Perusahaan Besar</p>
-                                    <div
-                                        ref={scrollRef}
-                                        className="overflow-x-scroll scrollbar-hide cursor-grab active:cursor-grabbing select-none"
-                                        onMouseDown={handleMouseDown}
-                                        onMouseLeave={handleMouseLeave}
-                                        onMouseUp={handleMouseUp}
-                                        onMouseMove={handleMouseMove}
-                                    >
-                                        <img
-                                            src={ClientsImage}
-                                            alt="Clients"
-                                            className="min-w-[300%] pointer-events-none"
-                                        />
-                                    </div>
+                                    <ClientCarousel />
                                 </div>
                                 <div className='flex flex-col pb-20 items-center gap-10'>
                                     <p className='font-bold text-2xl'>Portofolio</p>
