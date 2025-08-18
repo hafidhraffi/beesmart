@@ -9,11 +9,13 @@ import { Dialog } from "primereact/dialog"
 import { Button } from "primereact/button"
 import { InputText } from "primereact/inputtext"
 import { FileUpload } from "primereact/fileupload"
+import { Calendar } from "primereact/calendar"
 
 interface FormData {
     nama: string
     jenis: string
     instansi: string
+    tanggal: Date | null
     foto: File | null
 }
 
@@ -21,6 +23,7 @@ interface FormErrors {
     nama?: string
     jenis?: string
     instansi?: string
+    tanggal?: string
     foto?: string
 }
 
@@ -40,6 +43,7 @@ function Portofolio() {
         nama: "",
         jenis: "",
         instansi: "",
+        tanggal: null,
         foto: null
     })
     const [formErrors, setFormErrors] = useState<FormErrors>({})
@@ -78,6 +82,14 @@ function Portofolio() {
             data.append('nama', formData.nama)
             data.append('jenis', formData.jenis)
             data.append('instansi', formData.instansi)
+            if (formData.tanggal) {
+                const date = formData.tanggal
+                const day = String(date.getDate()).padStart(2, '0')
+                const month = String(date.getMonth() + 1).padStart(2, '0') // month is 0-based
+                const year = date.getFullYear()
+
+                data.append('tanggal', `${day}-${month}-${year}`) // Format: DD-MM-YYYY
+            }
             if (formData.foto) {
                 data.append('foto', formData.foto)
             }
@@ -104,6 +116,14 @@ function Portofolio() {
             data.append('nama', formData.nama)
             data.append('jenis', formData.jenis)
             data.append('instansi', formData.instansi)
+            if (formData.tanggal) {
+                const date = formData.tanggal
+                const day = String(date.getDate()).padStart(2, '0')
+                const month = String(date.getMonth() + 1).padStart(2, '0') // month is 0-based
+                const year = date.getFullYear()
+
+                data.append('tanggal', `${day}-${month}-${year}`) // Format: DD-MM-YYYY
+            }
             if (formData.foto) {
                 data.append('foto', formData.foto)
             }
@@ -139,6 +159,10 @@ function Portofolio() {
             errors.instansi = "Instansi tidak boleh kosong"
         }
 
+        if (!formData.tanggal) {
+            errors.tanggal = "Tanggal tidak boleh kosong"
+        }
+
         // For add mode, foto is required. For edit mode, foto is optional
         if (!isEdit && !formData.foto) {
             errors.foto = "Foto tidak boleh kosong"
@@ -153,6 +177,7 @@ function Portofolio() {
             nama: "",
             jenis: "",
             instansi: "",
+            tanggal: null,
             foto: null
         })
         setFormErrors({})
@@ -162,11 +187,17 @@ function Portofolio() {
         setSelectedPortofolio(null)
     }
 
+    const parseTanggal = (tanggalStr: string) => {
+        const [day, month, year] = tanggalStr.split("-").map(Number)
+        return new Date(year, month - 1, day) // month is 0-based in JS Date
+    }
+
     const populateFormForEdit = (portofolioData: any) => {
         setFormData({
             nama: portofolioData.nama || "",
             jenis: portofolioData.jenis || "",
             instansi: portofolioData.instansi || "",
+            tanggal: portofolioData.tanggal ? parseTanggal(portofolioData.tanggal) : null,
             foto: null // Always null for edit, existing image shown separately
         })
         setCurrentImage(portofolioData.foto || "")
@@ -175,7 +206,7 @@ function Portofolio() {
         setEditError(null)
     }
 
-    const handleInputChange = (field: keyof FormData, value: string) => {
+    const handleInputChange = (field: keyof FormData, value: string | Date | null) => {
         setFormData(prev => ({ ...prev, [field]: value }))
         // Clear error for this field when user starts typing
         if (formErrors[field]) {
@@ -208,7 +239,7 @@ function Portofolio() {
 
     const fotoBody = (rowData: any) => {
         return (
-            <img src={rowData.foto} className="max-h-20" />
+            <img src={rowData.foto} className="max-h-20" alt="Portofolio" />
         )
     }
 
@@ -286,6 +317,25 @@ function Portofolio() {
                 }}
             >
                 <div className="flex flex-col gap-4">
+                    {/* Tanggal */}
+                    <div className="field">
+                        <label htmlFor="edit-tanggal" className="block mb-2 font-medium">
+                            Tanggal <span className="text-red-500">*</span>
+                        </label>
+                        <Calendar
+                            id="edit-tanggal"
+                            value={formData.tanggal}
+                            onChange={(e) => e.value ? handleInputChange('tanggal', e.value) : handleInputChange('tanggal', null)}
+                            className={`w-full ${formErrors.tanggal ? 'p-invalid' : ''}`}
+                            placeholder="Pilih tanggal"
+                            dateFormat="dd/mm/yy"
+                            showIcon
+                        />
+                        {formErrors.tanggal && (
+                            <small className="text-red-500">{formErrors.tanggal}</small>
+                        )}
+                    </div>
+
                     {/* Nama */}
                     <div className="field">
                         <label htmlFor="edit-nama" className="block mb-2 font-medium">
@@ -418,6 +468,25 @@ function Portofolio() {
                 }}
             >
                 <div className="flex flex-col gap-4">
+                    {/* Tanggal */}
+                    <div className="field">
+                        <label htmlFor="tanggal" className="block mb-2 font-medium">
+                            Tanggal <span className="text-red-500">*</span>
+                        </label>
+                        <Calendar
+                            id="tanggal"
+                            value={formData.tanggal}
+                            onChange={(e) => e.value ? handleInputChange('tanggal', e.value) : handleInputChange('tanggal', null)}
+                            className={`w-full ${formErrors.tanggal ? 'p-invalid' : ''}`}
+                            placeholder="Pilih tanggal"
+                            dateFormat="dd/mm/yy"
+                            showIcon
+                        />
+                        {formErrors.tanggal && (
+                            <small className="text-red-500">{formErrors.tanggal}</small>
+                        )}
+                    </div>
+
                     {/* Nama */}
                     <div className="field">
                         <label htmlFor="nama" className="block mb-2 font-medium">

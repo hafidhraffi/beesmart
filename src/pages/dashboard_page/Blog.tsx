@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { Column } from "primereact/column"
 import { DataTable } from "primereact/datatable"
+import { Editor } from "primereact/editor"
 import api from "../../services/api"
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query"
 import { TrashIcon, PencilSquareIcon } from '@heroicons/react/20/solid'
@@ -8,7 +9,6 @@ import { useState } from "react"
 import { Dialog } from "primereact/dialog"
 import { Button } from "primereact/button"
 import { InputText } from "primereact/inputtext"
-import { InputTextarea } from "primereact/inputtextarea"
 import { FileUpload } from "primereact/fileupload"
 
 interface FormData {
@@ -127,7 +127,9 @@ function Blog() {
             errors.judul = "Judul tidak boleh kosong"
         }
 
-        if (!formData.isi.trim()) {
+        // Strip HTML tags for validation to check if there's actual content
+        const strippedContent = formData.isi.replace(/<[^>]*>/g, '').trim()
+        if (!strippedContent) {
             errors.isi = "Isi tidak boleh kosong"
         }
 
@@ -197,14 +199,16 @@ function Blog() {
     }
 
     const isiBody = (rowData: any) => {
+        // Strip HTML tags and show preview
+        const strippedContent = rowData.isi.replace(/<[^>]*>/g, '')
         return (
-            <p className="line-clamp-2">{rowData.isi}</p>
+            <p className="line-clamp-2">{strippedContent}</p>
         )
     }
 
     const gambarBody = (rowData: any) => {
         return (
-            <img src={rowData.gambar} className="max-h-20" />
+            <img src={rowData.gambar} className="max-h-20" alt="Blog" />
         )
     }
 
@@ -271,7 +275,7 @@ function Blog() {
             <Dialog
                 header="Edit Blog"
                 visible={editVisible}
-                style={{ width: "50vw" }}
+                style={{ width: "70vw", maxWidth: "900px" }}
                 onHide={() => {
                     setEditVisible(false)
                     resetForm()
@@ -338,18 +342,16 @@ function Blog() {
                         </small>
                     </div>
 
-                    {/* Isi */}
+                    {/* Isi - Rich Text Editor */}
                     <div className="field">
                         <label htmlFor="edit-isi" className="block mb-2 font-medium">
                             Isi <span className="text-red-500">*</span>
                         </label>
-                        <InputTextarea
-                            id="edit-isi"
+                        <Editor
                             value={formData.isi}
-                            onChange={(e) => handleInputChange('isi', e.target.value)}
-                            rows={5}
-                            className={`w-full ${formErrors.isi ? 'p-invalid' : ''}`}
-                            placeholder="Masukkan isi blog"
+                            onTextChange={(e) => handleInputChange('isi', e.htmlValue || '')}
+                            style={{ height: '320px' }}
+                            className={formErrors.isi ? 'p-invalid' : ''}
                         />
                         {formErrors.isi && (
                             <small className="text-red-500">{formErrors.isi}</small>
@@ -387,7 +389,7 @@ function Blog() {
             <Dialog
                 header="Tambah Blog Baru"
                 visible={addVisible}
-                style={{ width: "50vw" }}
+                style={{ width: "70vw", maxWidth: "900px" }}
                 onHide={() => {
                     setAddVisible(false)
                     resetForm()
@@ -438,18 +440,16 @@ function Blog() {
                         )}
                     </div>
 
-                    {/* Isi */}
+                    {/* Isi - Rich Text Editor */}
                     <div className="field">
                         <label htmlFor="isi" className="block mb-2 font-medium">
                             Isi <span className="text-red-500">*</span>
                         </label>
-                        <InputTextarea
-                            id="isi"
+                        <Editor
                             value={formData.isi}
-                            onChange={(e) => handleInputChange('isi', e.target.value)}
-                            rows={5}
-                            className={`w-full ${formErrors.isi ? 'p-invalid' : ''}`}
-                            placeholder="Masukkan isi blog"
+                            onTextChange={(e) => handleInputChange('isi', e.htmlValue || '')}
+                            style={{ height: '320px' }}
+                            className={formErrors.isi ? 'p-invalid' : ''}
                         />
                         {formErrors.isi && (
                             <small className="text-red-500">{formErrors.isi}</small>
