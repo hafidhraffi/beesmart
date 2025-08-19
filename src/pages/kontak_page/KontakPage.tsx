@@ -62,7 +62,7 @@ function KontakPage() {
             nomorTelepon: '',
             pesan: ''
         })
-        setSubmitStatus('success')
+        // setSubmitStatus('success')
         setIsLoading(false)
         // setIsLoading(true)
         // try {
@@ -116,8 +116,7 @@ function KontakPage() {
                         <div>
                             <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7521.923835521716!2d112.5921406!3d-7.3832289!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e780846d5411d85%3A0xd40a5ec5bb9c2594!2sCV.%20BeeSmart%20Solusi%20Media%20(%20Cetak%20Buku%20PoD%2C%20Cetak%20Kalender%20Murah%2C%20Cetak%20Buku%20Ajar%2C%20Cetak%20Blocknote!5e1!3m2!1sen!2sid!4v1755584332273!5m2!1sen!2sid"
-                                width="550"
-                                height="400"
+                                className='w-[550px] h-[400px] max-md:w-[400px] max-md:h-[300px] max-sm:w-[300px] max-sm:h-[180px]'
                                 style={{ border: 0 }}
                                 allowFullScreen
                                 loading="lazy"
