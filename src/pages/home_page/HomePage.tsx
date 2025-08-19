@@ -7,8 +7,9 @@ import QualityIcon from '../../assets/quality.png'
 import OnestopIcon from '../../assets/onestop.png'
 import BookImage from '../../assets/book.png'
 import CalendarImage from '../../assets/calendar.png'
+import BukuImage from '../../assets/buku.png'
+import MajalahImage from '../../assets/majalah.png'
 import SellingPointCard from './SellingPointCard'
-import ServiceCard from './ServiceCard'
 import AchievementPoint from './AchievementPoint'
 import PortfolioCard from './PortfolioCard'
 import TestimonialCard from './TestimonialCard'
@@ -77,11 +78,84 @@ function HomePage() {
                                 </div>
                                 <div className='flex flex-col py-20 text-white items-center gap-10'>
                                     <p className='font-bold text-2xl text-black'>Layanan</p>
-                                    <div className='grid grid-cols-2 max-md:grid-cols-1 gap-y-10 w-full max-lg:gap-x-10'>
-                                        <ServiceCard img={BookImage} title={'Buku'} list={['Buku Tahunan', 'Buku Ajar', 'Company Profile', 'Buku Custom']} />
-                                        <ServiceCard img={BookImage} title={'Buku Tahunan'} list={['Buku Tahunan', 'Buku Ajar', 'Company Profile', 'Buku Custom']} />
-                                        <ServiceCard img={CalendarImage} title={'Kalender'} list={['Kalender Dinding', 'Kalender Meja']} />
-                                        <ServiceCard img={CalendarImage} title={'Majalah'} list={['Kalender Dinding', 'Kalender Meja']} />
+                                    <div className='grid grid-cols-2 max-[1180px]:grid-cols-1 gap-y-10 w-full max-lg:gap-x-10'>
+                                        <div className='flex justify-center'>
+                                            <div className='h-[250px] w-full max-w-[500px] rounded-2xl bg-[#017d9e] flex justify-between gap-10'>
+                                                <div className='flex flex-col justify-between gap-5 py-5 pl-10'>
+                                                    <div className='flex flex-col gap-2'>
+                                                        <p className='font-bold text-xl'>Buku</p>
+                                                        <ul data-aos='fade-down' className='list-disc pl-5'>
+                                                            <li>Buku Tahunan</li>
+                                                            <li>Buku Ajar</li>
+                                                            <li>Company Profile</li>
+                                                            <li>Buku Custom</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div className='flex bg-white rounded-full w-fit py-2 px-3 text-[#017d9e] items-center gap-2 cursor-pointer active:scale-95 hover:shadow hover:shadow-white transition-all'>
+                                                        <p>Detail</p>
+                                                        <ArrowRightIcon className='h-5' />
+                                                    </div>
+                                                </div>
+                                                <img src={BukuImage} className="h-[250px]" />
+                                            </div>
+                                        </div>
+                                        <div className='flex justify-center'>
+                                            <div className='h-[250px] w-full max-w-[500px] rounded-2xl bg-[#017d9e] flex justify-between gap-10'>
+                                                <div className='flex flex-col justify-between gap-5 py-5 pl-10'>
+                                                    <div className='flex flex-col gap-2'>
+                                                        <p className='font-bold text-xl'>Buku Tahunan</p>
+                                                        <ul data-aos='fade-down' className='list-disc pl-5'>
+                                                            <li>Buku Tahunan</li>
+                                                            <li>Buku Ajar</li>
+                                                            <li>Company Profile</li>
+                                                            <li>Buku Custom</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div className='flex bg-white rounded-full w-fit py-2 px-3 text-[#017d9e] items-center gap-2 cursor-pointer active:scale-95 hover:shadow hover:shadow-white transition-all'>
+                                                        <p>Detail</p>
+                                                        <ArrowRightIcon className='h-5' />
+                                                    </div>
+                                                </div>
+                                                <img src={BookImage} className="h-[250px]" />
+                                            </div>
+                                        </div>
+                                        <div className='flex justify-center'>
+                                            <div className='h-[250px] w-full max-w-[500px] rounded-2xl bg-[#017d9e] flex justify-between gap-10'>
+                                                <div className='flex flex-col justify-between gap-5 py-5 pl-10'>
+                                                    <div className='flex flex-col gap-2'>
+                                                        <p className='font-bold text-xl'>Kalender</p>
+                                                        <ul data-aos='fade-down' className='list-disc pl-5'>
+                                                            <li>Kalender Dinding</li>
+                                                            <li>Kalender Meja</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div className='flex bg-white rounded-full w-fit py-2 px-3 text-[#017d9e] items-center gap-2 cursor-pointer active:scale-95 hover:shadow hover:shadow-white transition-all'>
+                                                        <p>Detail</p>
+                                                        <ArrowRightIcon className='h-5' />
+                                                    </div>
+                                                </div>
+                                                <img src={CalendarImage} className="h-[250px]" />
+                                            </div>
+                                        </div>
+                                        <div className='flex justify-center'>
+                                            <div className='h-[250px] w-full max-w-[500px] rounded-2xl bg-[#017d9e] flex justify-between gap-10'>
+                                                <div className='flex flex-col justify-between gap-5 py-5 pl-10'>
+                                                    <div className='flex flex-col gap-2'>
+                                                        <p className='font-bold text-xl'>Majalah</p>
+                                                        <ul data-aos='fade-down' className='list-disc pl-5'>
+                                                            <li>Majalah Lifestyle</li>
+                                                            <li>Majalah Berita</li>
+                                                            <li>Majalah Anak</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div className='flex bg-white rounded-full w-fit py-2 px-3 text-[#017d9e] items-center gap-2 cursor-pointer active:scale-95 hover:shadow hover:shadow-white transition-all'>
+                                                        <p>Detail</p>
+                                                        <ArrowRightIcon className='h-5' />
+                                                    </div>
+                                                </div>
+                                                <img src={MajalahImage} className="h-[250px]" />
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -108,7 +182,7 @@ function HomePage() {
                                 </div>
                                 <div className='flex flex-col pb-20 items-center gap-10'>
                                     <p className='font-bold text-2xl'>Portofolio</p>
-                                    <div className='grid grid-cols-4 max-lg:grid-cols-3 max-md:grid-cols-2 gap-5'>
+                                    <div className='grid grid-cols-4 max-lg:grid-cols-3 max-md:grid-cols-2 gap-5 w-full'>
                                         {
                                             data.portofolio.map((element, index) => {
                                                 return (
