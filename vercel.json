@@ -3,6 +3,10 @@
     {
       "source": "/(.*)",
       "destination": "/index.html"
+    } ,
+ {
+      "source": "/blog/:path*",
+      "destination": "https://beesmart-sm.vercel.app/blog/:path*"
     }
   ]
 }
