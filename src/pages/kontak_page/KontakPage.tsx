@@ -63,7 +63,7 @@ function KontakPage() {
             pesan: ''
         })
         setSubmitStatus('success')
-
+        setIsLoading(false)
         // setIsLoading(true)
         // try {
         //     // Simulasi kirim
