@@ -9,7 +9,7 @@ import LoginPage from './pages/login_page/LoginPage';
 import DashboardPage from './pages/dashboard_page/DashboardPage';
 import { PrimeReactProvider } from 'primereact/api';
 import "primereact/resources/themes/lara-light-cyan/theme.css";
-import BlogPage from './pages/home_page/BlogPage';
+// import BlogPage from './pages/home_page/BlogPage';
 
 const router = createBrowserRouter([
   {
@@ -21,10 +21,10 @@ const router = createBrowserRouter([
       // { path: "products", element: <ProductsPage /> },
     ],
   },
-  {
-    path: "/blog",
-    element: <BlogPage />,
-  },
+  // {
+  //   path: "/blog",
+  //   element: <BlogPage />,
+  // },
   {
     path: "/login",
     element: <LoginPage />,

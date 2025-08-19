@@ -25,11 +25,19 @@ export default function Navbar() {
                 <div className='flex flex-col gap-5 mx-7'>
                     {
                         pages.map((data, index) => {
-                            return (
-                                <div key={index} onClick={() => navigate(data.path)} className={`cursor-pointer relative inline-block transition-all active:scale-95 hover:text-[#017d9e] ${location.pathname == data.path ? 'text-[#017d9e]' : ''}`}>
-                                    {data.text}
-                                </div>
-                            )
+                            if (data.text === "Blog") {
+                                return (
+                                    <a key={index} href='/blog' className={`cursor-pointer relative inline-block transition-all active:scale-95 hover:text-[#017d9e] ${location.pathname == data.path ? 'text-[#017d9e]' : ''}`}>
+                                        {data.text}
+                                    </a>
+                                )
+                            } else {
+                                return (
+                                    <div key={index} onClick={() => navigate(data.path)} className={`cursor-pointer relative inline-block transition-all active:scale-95 hover:text-[#017d9e] ${location.pathname == data.path ? 'text-[#017d9e]' : ''}`}>
+                                        {data.text}
+                                    </div>
+                                )
+                            }
                         })
                     }
                     <a href='https://wa.me/6281282008045' className='w-fit flex items-center border border-[#017d9e] rounded-sm cursor-pointer hover:scale-105 active:scale-95 transition-all'>
@@ -46,11 +54,19 @@ export default function Navbar() {
                     <div className="hidden lg:flex gap-9 h-full items-center">
                         {
                             pages.map((data, index) => {
-                                return (
-                                    <div key={index} onClick={() => navigate(data.path)} className={`cursor-pointer relative transition-all active:scale-95 hover:text-[#017d9e] ${location.pathname == data.path ? 'text-[#017d9e]' : ''}`}>
-                                        {data.text}
-                                    </div>
-                                )
+                                if (data.text === "Blog") {
+                                    return (
+                                        <a key={index} href='/blog' className={`cursor-pointer relative transition-all active:scale-95 hover:text-[#017d9e] ${location.pathname == data.path ? 'text-[#017d9e]' : ''}`}>
+                                            {data.text}
+                                        </a>
+                                    )
+                                } else {
+                                    return (
+                                        <div key={index} onClick={() => navigate(data.path)} className={`cursor-pointer relative transition-all active:scale-95 hover:text-[#017d9e] ${location.pathname == data.path ? 'text-[#017d9e]' : ''}`}>
+                                            {data.text}
+                                        </div>
+                                    )
+                                }
                             })
                         }
                         <a href='https://wa.me/6281282008045' className='flex items-center border border-[#017d9e] rounded-sm cursor-pointer hover:scale-105 active:scale-95 transition-all'>
