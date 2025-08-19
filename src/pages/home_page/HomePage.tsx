@@ -17,8 +17,10 @@ import api from '../../services/api'
 import { useQuery } from '@tanstack/react-query'
 import type { HomePageData } from '../../types/homePageData'
 import ClientCarousel from './ClientCarousel'
+import { useNavigate } from 'react-router'
 
 function HomePage() {
+    const navigate = useNavigate()
     const fetchHomePageData = async (): Promise<HomePageData> => {
         const { data } = await api.get<HomePageData>("/get-beranda")
         return data
@@ -35,11 +37,11 @@ function HomePage() {
                 data ?
                     <>
                         <div className='fixed -z-10 flex flex-col items-center w-full'>
-                            <img src={HomepageBanner} className='min-w-[1480px] w-screen' />
-                            <img src={HomepageBanner} className='min-w-[1480px] w-screen' />
+                            <img src={HomepageBanner} className='min-w-[1520px] w-screen' />
+                            <img src={HomepageBanner} className='min-w-[1520px] w-screen' />
                         </div>
                         <div className="w-full flex justify-center">
-                            <div className="px-5 sm:px-20 w-[1480px]">
+                            <div className="px-5 sm:px-20 w-[1520px]">
                                 <div data-aos='fade-in' className='flex flex-col h-[730px] items-center justify-center gap-5'>
                                     <p className='text-white text-6xl max-sm:text-2xl max-md:text-3xl max-lg:text-4xl font-semibold text-center'>
                                         Cari Partner Desain & Cetak Untuk Instansi, Perusahaan dan Bisnis Anda?
@@ -51,7 +53,7 @@ function HomePage() {
                             </div>
                         </div>
                         <div className="w-full flex justify-center bg-white">
-                            <div className="px-5 sm:px-20 w-[1480px]">
+                            <div className="px-5 sm:px-20 w-[1520px]">
                                 <div data-aos="fade-up" className='flex max-lg:gap-10 gap-20 py-20 items-center max-lg:flex-col'>
                                     <div className='flex flex-col gap-10'>
                                         <div>
@@ -59,7 +61,7 @@ function HomePage() {
                                             <p className='text-xl'>Siap membantu anda</p>
                                         </div>
                                         <p className='text-base text-justify'>CV. Beesmart Solusi Media adalah perusahaan Kreatif di bidang desain dan cetak yang telah berdiri sejak tahun 2015. Lebih dari 10 tahun berpengalaman menyelesaikan project-project besar kebutuhan desain dan cetak berbagai instansi dan perusahaan.</p>
-                                        <div className='flex bg-[#017d9e] rounded-full w-fit py-2 px-3 text-white items-center gap-2 cursor-pointer active:scale-95 hover:shadow-[#017d9e] hover:shadow transition-all'>
+                                        <div onClick={() => navigate("/tentang-kami")} className='flex bg-[#017d9e] rounded-full w-fit py-2 px-3 text-white items-center gap-2 cursor-pointer active:scale-95 hover:shadow-[#017d9e] hover:shadow transition-all'>
                                             <p>Tentang Kami</p>
                                             <ArrowRightIcon className='h-5' />
                                         </div>
@@ -80,7 +82,7 @@ function HomePage() {
                                     <p className='font-bold text-2xl text-black'>Layanan</p>
                                     <div className='grid grid-cols-2 max-[1180px]:grid-cols-1 gap-y-10 w-full max-lg:gap-x-10'>
                                         <div className='flex justify-center'>
-                                            <div className='h-[250px] w-full max-w-[500px] rounded-2xl bg-[#017d9e] flex justify-between gap-10'>
+                                            <div className='h-[250px] w-full max-w-[500px] rounded-2xl bg-[#017d9e] flex justify-between gap-10 max-sm:flex-col max-sm:h-fit max-sm:gap-5 max-sm:pb-5'>
                                                 <div className='flex flex-col justify-between gap-5 py-5 pl-10'>
                                                     <div className='flex flex-col gap-2'>
                                                         <p className='font-bold text-xl'>Buku</p>
@@ -96,11 +98,11 @@ function HomePage() {
                                                         <ArrowRightIcon className='h-5' />
                                                     </div>
                                                 </div>
-                                                <img src={BukuImage} className="h-[250px]" />
+                                                <img src={BukuImage} className="h-[250px] object-contain" />
                                             </div>
                                         </div>
                                         <div className='flex justify-center'>
-                                            <div className='h-[250px] w-full max-w-[500px] rounded-2xl bg-[#017d9e] flex justify-between gap-10'>
+                                            <div className='h-[250px] w-full max-w-[500px] rounded-2xl bg-[#017d9e] flex justify-between gap-10 max-sm:flex-col max-sm:h-fit max-sm:gap-5 max-sm:pb-5'>
                                                 <div className='flex flex-col justify-between gap-5 py-5 pl-10'>
                                                     <div className='flex flex-col gap-2'>
                                                         <p className='font-bold text-xl'>Buku Tahunan</p>
@@ -116,11 +118,11 @@ function HomePage() {
                                                         <ArrowRightIcon className='h-5' />
                                                     </div>
                                                 </div>
-                                                <img src={BookImage} className="h-[250px]" />
+                                                <img src={BookImage} className="h-[250px] object-contain" />
                                             </div>
                                         </div>
                                         <div className='flex justify-center'>
-                                            <div className='h-[250px] w-full max-w-[500px] rounded-2xl bg-[#017d9e] flex justify-between gap-10'>
+                                            <div className='h-[250px] w-full max-w-[500px] rounded-2xl bg-[#017d9e] flex justify-between gap-10 max-sm:flex-col max-sm:h-fit max-sm:gap-5 max-sm:pb-5'>
                                                 <div className='flex flex-col justify-between gap-5 py-5 pl-10'>
                                                     <div className='flex flex-col gap-2'>
                                                         <p className='font-bold text-xl'>Kalender</p>
@@ -134,11 +136,11 @@ function HomePage() {
                                                         <ArrowRightIcon className='h-5' />
                                                     </div>
                                                 </div>
-                                                <img src={CalendarImage} className="h-[250px]" />
+                                                <img src={CalendarImage} className="h-[250px] object-contain" />
                                             </div>
                                         </div>
                                         <div className='flex justify-center'>
-                                            <div className='h-[250px] w-full max-w-[500px] rounded-2xl bg-[#017d9e] flex justify-between gap-10'>
+                                            <div className='h-[250px] w-full max-w-[500px] rounded-2xl bg-[#017d9e] flex justify-between gap-10 max-sm:flex-col max-sm:h-fit max-sm:gap-5 max-sm:pb-5'>
                                                 <div className='flex flex-col justify-between gap-5 py-5 pl-10'>
                                                     <div className='flex flex-col gap-2'>
                                                         <p className='font-bold text-xl'>Majalah</p>
@@ -153,7 +155,7 @@ function HomePage() {
                                                         <ArrowRightIcon className='h-5' />
                                                     </div>
                                                 </div>
-                                                <img src={MajalahImage} className="h-[250px]" />
+                                                <img src={MajalahImage} className="h-[250px] object-contain" />
                                             </div>
                                         </div>
                                     </div>
@@ -161,7 +163,7 @@ function HomePage() {
                             </div>
                         </div>
                         <div className="w-full flex justify-center bg-[#017d9e]">
-                            <div className="px-5 sm:px-20 w-[1480px]">
+                            <div className="px-5 sm:px-20 w-[1520px]">
                                 <div className='flex flex-col py-20 items-center max-lg:flex-col gap-5 text-white'>
                                     <p className='font-bold text-2xl'>Pencapaian Kami</p>
                                     <p className='text-base text-justify'>Berikut Pencapaian Kami Dari Awal Berdiri Hingga Saat Ini</p>
@@ -174,7 +176,7 @@ function HomePage() {
                             </div>
                         </div>
                         <div className="w-full flex justify-center bg-white">
-                            <div className="px-5 sm:px-20 w-[1480px]">
+                            <div className="px-5 sm:px-20 w-[1520px]">
                                 <div className='flex flex-col py-20 items-center max-lg:flex-col gap-5'>
                                     <p className='font-bold text-2xl'>Klien Kami</p>
                                     <p className='text-base text-justify'>Dipercaya Oleh 50+ Perusahaan Besar</p>

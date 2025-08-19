@@ -76,7 +76,7 @@ function DashboardPage() {
             {data ? (
                 <>
                     <div className="w-full flex justify-center shadow-lg fixed z-50 bg-white">
-                        <div className="px-5 sm:px-20 w-[1480px] flex justify-between py-4">
+                        <div className="px-5 sm:px-20 w-[1520px] flex justify-between py-4">
                             <img src={beesmartLogo} className='h-8' />
                             <a onClick={logoutAction} className='cursor-pointer hover:text-[#017d9e]'>Logout</a>
                         </div>

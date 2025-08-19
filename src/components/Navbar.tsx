@@ -9,10 +9,10 @@ export default function Navbar() {
     const [showSideBar, setShowSideBar] = useState<boolean>(false)
     const pages = [
         { path: "/", text: "Beranda", },
-        { path: "/about", text: "Tentang Kami", },
+        { path: "/tentang-kami", text: "Tentang Kami", },
         { path: "/blog", text: "Blog", },
         { path: "/Portofolio", text: "Portofolio", },
-        { path: "/Kontak", text: "Kontak", },
+        { path: "/kontak", text: "Kontak", },
     ]
 
     return (
@@ -47,7 +47,7 @@ export default function Navbar() {
                 </div>
             </div>
             <div className={`z-10 w-screen flex justify-center fixed text-[#1b3434] shadow-lg bg-white`}>
-                <div className={`px-5 sm:px-20 h-16 w-[1480px] flex justify-between items-center`}>
+                <div className={`px-5 sm:px-20 h-16 w-[1520px] flex justify-between items-center`}>
                     <div onClick={() => navigate("/")} className="cursor-default flex gap-2">
                         <img src={beesmartLogo} className='h-8' />
                     </div>

@@ -10,7 +10,7 @@ import DashboardPage from './pages/dashboard_page/DashboardPage';
 import { PrimeReactProvider } from 'primereact/api';
 import "primereact/resources/themes/lara-light-cyan/theme.css";
 import KontakPage from './pages/kontak_page/KontakPage';
-// import BlogPage from './pages/home_page/BlogPage';
+import AboutPage from './pages/about_page/AboutPage';
 
 const router = createBrowserRouter([
   {
@@ -18,14 +18,11 @@ const router = createBrowserRouter([
     element: <Layout />,
     children: [
       { index: true, element: <HomePage /> },
-      // { path: "about", element: <AboutPage /> },
+      { path: "tentang-kami", element: <AboutPage /> },
       { path: "kontak", element: <KontakPage /> },
+      { path: "*", element: <HomePage /> },
     ],
   },
-  // {
-  //   path: "/blog",
-  //   element: <BlogPage />,
-  // },
   {
     path: "/login",
     element: <LoginPage />,
@@ -34,10 +31,6 @@ const router = createBrowserRouter([
     path: "/dashboard",
     element: <DashboardPage />,
   },
-  // {
-  //   path: "/*",
-  //   element: <NotFound />,
-  // },
 ]);
 
 const queryClient = new QueryClient();
