@@ -1,5 +1,5 @@
 
-import { RectangleStackIcon, NewspaperIcon, StarIcon, CheckBadgeIcon, CurrencyDollarIcon } from '@heroicons/react/24/outline'
+import { RectangleStackIcon, NewspaperIcon, StarIcon, CheckBadgeIcon } from '@heroicons/react/24/outline'
 import { useState } from 'react'
 import Blog from './Blog'
 import Portofolio from './Portofolio'
@@ -26,10 +26,6 @@ function EditsSection() {
             title: 'Pencapaian',
             icon: <CheckBadgeIcon className='h-8' />,
         },
-        {
-            title: 'Harga',
-            icon: <CurrencyDollarIcon className='h-8' />,
-        }
     ]
 
     return (
