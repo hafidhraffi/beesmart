@@ -89,7 +89,7 @@ function KontakPage() {
             <div className="bg-[#017d9e] w-full flex justify-center">
                 <div className="flex justify-center">
                     <div className="pt-16 flex gap-20 items-center max-lg:flex-col max-lg:pt-20">
-                        <div className="text-white flex flex-col gap-7 ml-10">
+                        <div className="text-white flex flex-col gap-7 mx-10">
                             <div>
                                 <p className="font-bold">Alamat</p>
                                 <p>Perum Pesona Permata Ungu Jl. Merak No.16 Blok I, Bakalan, Tempel, Kec. Krian, Kabupaten Sidoarjo, Jawa Timur 61262</p>

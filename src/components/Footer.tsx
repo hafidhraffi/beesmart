@@ -3,7 +3,9 @@ function Footer() {
     return (
         <>
             <footer className="bg-[#017D9E] text-white py-8">
-                <div className="container mx-auto px-6 md:px-16 grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16 text-sm">
+                <div className="container mx-auto px-6 md:px-16 grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16 text-sm justify-items-start md:justify-items-center">
+
+
 
                     <div className="text-left max-w-xs">
                         <h3 className="font-semibold mb-2">Alamat</h3>
@@ -49,7 +51,7 @@ function Footer() {
                 </div>
 
                 <div className="text-center text-xs mt-6 border-t border-white/20 pt-4">
-                    © 2025 Beesmart Solusi Media. All Rights Reserved. | Spesialis Desain & Percetakan - Sidoarjo, Jawa Timur
+                    © 2025 Beesmart Solusi Media. All Rights Reserved. | Spesialis Desain & Percetakan – Sidoarjo, Jawa Timur
                 </div>
             </footer>
 
