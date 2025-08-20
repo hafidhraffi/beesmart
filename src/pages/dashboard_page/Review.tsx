@@ -188,7 +188,7 @@ function Review() {
             <Dialog
                 header="Edit Review"
                 visible={editVisible}
-                style={{ width: "60vw", maxWidth: "800px" }}
+                style={{ width: "100vw", maxWidth: "900px" }}
                 onHide={() => {
                     setEditVisible(false)
                     resetForm()

@@ -86,8 +86,8 @@ function DashboardPage() {
                             <Squares2X2Icon onClick={() => setSelectedMenu('dashboard')} className={`h-8 cursor-pointer mx-auto hover:scale-105 active:scale-95 rounded-md ${selectedMenu === "dashboard" ? 'bg-white text-[#017d9e]' : ''} `} />
                             <PencilSquareIcon onClick={() => setSelectedMenu('edits')} className={`h-8 cursor-pointer mx-auto hover:scale-105 active:scale-95 rounded-md ${selectedMenu === "edits" ? 'bg-white text-[#017d9e]' : ''}`} />
                         </div>
-                        <div className='w-full mt-20'>
-                            <p className='ml-10 font-semibold text-lg'>{welcomeMessage}</p>
+                        <div className='w-full pt-20'>
+                            <p className='mx-10 font-semibold text-lg'>{welcomeMessage}</p>
                             {
                                 selectedMenu === 'dashboard' ?
                                     <>
@@ -95,7 +95,7 @@ function DashboardPage() {
                                             {Object.entries(data).map(([item, total], index) => (
                                                 <div
                                                     key={index}
-                                                    className="border border-gray-400 rounded-lg w-fit px-5 h-24 flex flex-col justify-evenly"
+                                                    className="border border-gray-400 rounded-lg w-fit max-lg:w-[250px] px-5 h-24 flex flex-col justify-evenly"
                                                 >
                                                     <p>Total pengunjung {formatKey(item)}</p>
                                                     <div className='flex items-center gap-5'>

@@ -57,7 +57,7 @@ function Pencapaian() {
             <Dialog
                 header={"Edit " + optionKey}
                 visible={visible}
-                style={{ width: "30vw" }}
+                style={{ width: "100vw", maxWidth: "500px" }}
                 onHide={() => setVisible(false)}
             >
                 <form

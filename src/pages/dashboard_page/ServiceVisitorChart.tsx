@@ -142,8 +142,8 @@ const ServiceVisitorChart: React.FC = () => {
     }
 
     return (
-        <div className="w-full py-6 px-20">
-            <div className="flex justify-between items-center mb-6">
+        <div className="w-full py-6 px-5">
+            <div className="flex max-lg:flex-col justify-between items-center mb-6 gap-5">
                 <h2 className="text-xl font-medium text-gray-700">Grafik Pengunjung Layanan</h2>
 
                 {/* Range Selector */}

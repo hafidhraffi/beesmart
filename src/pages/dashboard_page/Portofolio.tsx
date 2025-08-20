@@ -271,7 +271,7 @@ function Portofolio() {
             <Dialog
                 header="Konfirmasi Hapus"
                 visible={deleteVisible}
-                style={{ width: "30vw" }}
+                style={{ width: "100vw", maxWidth: "500px" }}
                 onHide={() => {
                     setDeleteVisible(false)
                     setDeleteError(null)
@@ -310,7 +310,7 @@ function Portofolio() {
             <Dialog
                 header="Edit Portofolio"
                 visible={editVisible}
-                style={{ width: "50vw" }}
+                style={{ width: "100vw", maxWidth: "900px" }}
                 onHide={() => {
                     setEditVisible(false)
                     resetForm()
@@ -461,7 +461,7 @@ function Portofolio() {
             <Dialog
                 header="Tambah Portofolio Baru"
                 visible={addVisible}
-                style={{ width: "50vw" }}
+                style={{ width: "100vw", maxWidth: "900px" }}
                 onHide={() => {
                     setAddVisible(false)
                     resetForm()

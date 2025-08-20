@@ -240,7 +240,7 @@ function Blog() {
             <Dialog
                 header="Konfirmasi Hapus"
                 visible={deleteVisible}
-                style={{ width: "30vw" }}
+                style={{ width: "100vw", maxWidth: "500px" }}
                 onHide={() => {
                     setDeleteVisible(false)
                     setDeleteError(null)
@@ -275,7 +275,7 @@ function Blog() {
             <Dialog
                 header="Edit Blog"
                 visible={editVisible}
-                style={{ width: "70vw", maxWidth: "900px" }}
+                style={{ width: "100vw", maxWidth: "900px" }}
                 onHide={() => {
                     setEditVisible(false)
                     resetForm()
@@ -389,7 +389,7 @@ function Blog() {
             <Dialog
                 header="Tambah Blog Baru"
                 visible={addVisible}
-                style={{ width: "70vw", maxWidth: "900px" }}
+                style={{ width: "100vw", maxWidth: "900px" }}
                 onHide={() => {
                     setAddVisible(false)
                     resetForm()
