@@ -11,11 +11,13 @@ function Layout() {
     }, [pathname]);
 
     return (
-        <>
+        <div className="flex flex-col min-h-screen">
             <Navbar />
             <Outlet />
-            <Footer />
-        </>
+            <div className="mt-auto">
+                <Footer />
+            </div>
+        </div>
     );
 }
 

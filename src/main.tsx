@@ -11,6 +11,7 @@ import { PrimeReactProvider } from 'primereact/api';
 import "primereact/resources/themes/lara-light-cyan/theme.css";
 import KontakPage from './pages/kontak_page/KontakPage';
 import AboutPage from './pages/about_page/AboutPage';
+import PortofolioPage from './pages/portofolio_page/PortofolioPage';
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,7 @@ const router = createBrowserRouter([
       { index: true, element: <HomePage /> },
       { path: "tentang-kami", element: <AboutPage /> },
       { path: "kontak", element: <KontakPage /> },
+      { path: "portofolio", element: <PortofolioPage /> },
       { path: "*", element: <HomePage /> },
     ],
   },

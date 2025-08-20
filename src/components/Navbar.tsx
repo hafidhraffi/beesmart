@@ -11,7 +11,7 @@ export default function Navbar() {
         { path: "/", text: "Beranda", },
         { path: "/tentang-kami", text: "Tentang Kami", },
         { path: "/blog", text: "Blog", },
-        { path: "/Portofolio", text: "Portofolio", },
+        { path: "/portofolio", text: "Portofolio", },
         { path: "/kontak", text: "Kontak", },
     ]
 
