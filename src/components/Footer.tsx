@@ -3,13 +3,15 @@ function Footer() {
     return (
         <>
             <footer className="bg-[#017D9E] text-white py-8">
-                <div className="container mx-auto px-6 md:px-16 grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16 place-items-center text-sm">
+                <div className="container mx-auto px-6 md:px-16 grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16 text-sm">
 
-                    <div className="text-center md:text-left max-w-xs">
+                    <div className="text-left max-w-xs">
                         <h3 className="font-semibold mb-2">Alamat</h3>
-                        <p>Perum Pesona Permata Ungu Jl. Merak No.16</p>
-                        <p>Blok I, Bakalan, Tempel, Kec. Krian, Kabupaten Sidoarjo, Jawa Timur 61262</p>
-                        <div className="mt-2 flex items-center justify-center md:justify-start gap-1">
+                        <p>
+                            Perum Pesona Permata Ungu Jl. Merak No.16<br></br>
+                            Blok I, Bakalan, Tempel, Kec. Krian, Kabupaten Sidoarjo, Jawa Timur 61262
+                        </p>
+                        <div className="mt-2 flex items-center gap-1">
                             <svg xmlns="http://www.w3.org/2000/svg"
                                 className="w-4 h-4"
                                 fill="none"
@@ -29,17 +31,15 @@ function Footer() {
 
                     <div className="text-left max-w-xs">
                         <h3 className="font-semibold mb-2">Jam Operasional</h3>
-                        <p>Senin - Jumat</p>
-                        <p>08.00 - 17.00 WIB</p>
-                        <p className="mt-2">Sabtu</p>
-                        <p>08.00 - 15.00 WIB</p>
+                        <p>Senin - Jumat<br></br>08.00 - 17.00 WIB</p>
+                        <p className="mt-2">Sabtu<br></br>08.00 - 15.00 WIB</p>
                     </div>
 
-                    <div className="text-center md:text-left max-w-xs">
+                    <div className="text-left max-w-xs">
                         <h3 className="font-semibold mb-2">Hubungi Kami</h3>
                         <p>Whatsapp : 0812-8200-8045</p>
                         <p>Email : <a href="mailto:beesmartsm@gmail.com" className="underline hover:text-gray-200">beesmartsm@gmail.com</a></p>
-                        <div className="flex justify-left md:left-end space-x-4 mt-3">
+                        <div className="flex space-x-4 mt-3">
                             <a href="https://www.instagram.com/beesmart.sm/"><img src="https://beesmart-sm.vercel.app/static/images/ig.png" alt="Instagram" className="w-5 h-5" /></a>
                             <a href="https://www.tiktok.com/@beesmart.co.id"><img src="https://beesmart-sm.vercel.app/static/images/tiktok.png" alt="TikTok" className="w-5 h-5" /></a>
                             <a href="https://www.facebook.com/BeeSmartSolusiMedia/"><img src="https://beesmart-sm.vercel.app/static/images/fb.png" alt="Facebook" className="w-5 h-5" /></a>
@@ -52,6 +52,7 @@ function Footer() {
                     © 2025 Beesmart Solusi Media. All Rights Reserved. | Spesialis Desain & Percetakan - Sidoarjo, Jawa Timur
                 </div>
             </footer>
+
         </>
     )
 }

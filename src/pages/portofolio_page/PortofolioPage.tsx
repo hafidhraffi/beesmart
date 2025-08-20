@@ -59,13 +59,13 @@ function PortofolioPage() {
                         <div className="px-5 sm:px-20 justify-center w-[1520px]">
                             <div className='mt-28 flex flex-col pb-20 items-center gap-10'>
                                 <p className='font-bold text-2xl'>Portofolio</p>
-                                <div className="w-full flex flex-col gap-1">
-                                    <div className="w-full flex justify-between items-center">
-                                        <div className="flex gap-5">
+                                <div className="w-full flex flex-col gap-5">
+                                    <div className="w-full flex flex-wrap gap-5 justify-between items-center">
+                                        <div className="flex flex-wrap gap-5">
                                             {
                                                 categoryOptions.map((element, index) => {
                                                     return (
-                                                        <div onClick={() => setSelectedCategory(element)} className={`cursor-pointer ${selectedCategory.label === element.label ? "text-[#017d9e]" : ""}`} key={index}>{element.label}</div>
+                                                        <div onClick={() => setSelectedCategory(element)} className={`whitespace-nowrap cursor-pointer ${selectedCategory.label === element.label ? "text-[#017d9e]" : ""}`} key={index}>{element.label}</div>
                                                     )
                                                 })
                                             }

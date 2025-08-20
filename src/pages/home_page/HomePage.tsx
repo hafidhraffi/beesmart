@@ -170,7 +170,9 @@ function HomePage() {
                                     <div className='grid grid-cols-3 max-sm:grid-cols-2 w-full gap-y-5'>
                                         <AchievementPoint count={data.pencapaian.pengalaman} desc={'Tahun Pengalaman'} />
                                         <AchievementPoint count={data.pencapaian.projek} desc={'Proyek Selesai'} />
-                                        <AchievementPoint count={data.pencapaian.klien} desc={'Klien Puas'} />
+                                        <div className="max-sm:col-span-2">
+                                            <AchievementPoint count={data.pencapaian.klien} desc={'Klien Puas'} />
+                                        </div>
                                     </div>
                                 </div>
                             </div>

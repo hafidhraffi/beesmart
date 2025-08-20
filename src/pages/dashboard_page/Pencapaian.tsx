@@ -86,7 +86,7 @@ function Pencapaian() {
 
             {data ? (
                 <div className="grid grid-cols-3 max-sm:grid-cols-2 w-full gap-y-5 text-[#017d9e] gap-x-10">
-                    <div>
+                    <div className="flex flex-col justify-between h-full">
                         <AchievementPoint
                             count={data.pencapaian.pengalaman}
                             desc={"Tahun Pengalaman"}
@@ -101,7 +101,7 @@ function Pencapaian() {
                             Edit Pencapaian
                         </div>
                     </div>
-                    <div>
+                    <div className="flex flex-col justify-between h-full">
                         <AchievementPoint
                             count={data.pencapaian.projek}
                             desc={"Proyek Selesai"}
@@ -116,7 +116,7 @@ function Pencapaian() {
                             Edit Pencapaian
                         </div>
                     </div>
-                    <div>
+                    <div className="flex flex-col justify-between h-full">
                         <AchievementPoint
                             count={data.pencapaian.klien}
                             desc={"Klien Puas"}
