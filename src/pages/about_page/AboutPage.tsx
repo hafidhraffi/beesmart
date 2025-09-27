@@ -19,28 +19,30 @@ function AboutPage() {
         <>
             {data ? (
                 <>
-                    <div className="bg-[#017d9e] w-full flex justify-center">
+                    <div className="w-full flex justify-center">
                         <div className="justify-center w-[1520px]">
-                            <div className="pt-16 grid grid-cols-2 gap-y-10 items-center max-lg:grid-cols-1 max-lg:pt-20">
-                                <div className="text-white text-justify flex flex-col gap-10 mx-20 max-md:mx-5">
-                                    <p className="text-2xl font-bold">Tentang Kami</p>
+                            <div className="pt-28 flex justify-evenly max-lg:pt-36">
+                                <div className="text-justify flex flex-col gap-10 max-w-[700px]">
+                                    <p className="text-4xl font-bold">Tentang Kami</p>
                                     <p>Beesmart Solusi Media adalah perusahaan Kreatif di bidang desain dan cetak yang telah berdiri sejak tahun 2015. Lebih dari 8 tahun berpengalaman menyelesaikan project–project besar kebutuhan desain dan cetak berbagai instansi dan perusahaan.</p>
                                     <p>Pemahaman terhadap desain yang dipadukan dengan target market yang akurat serta disesuaikan dengan media cetak menjadi solusi untuk merespon setiap tantangan kompetisi bisnis saat ini. Oleh karena itu kami mengutamakan kreativitas, strategi dan ide-ide segar dalam menghasilkan desain yang relevan dengan kebutuhan yang direalisasikan dalam bentuk media cetak dan promosi.</p>
                                 </div>
                                 <div>
-                                    <img src={TeamImage} />
+                                    <img src={TeamImage} className='h-[350px] rounded-4xl' />
                                 </div>
                             </div>
-                            <div className='flex justify-center text-white py-20 text-center'>
-                                <p className='font-bold text-4xl max-lg:text-3xl max-md:text-2xl max-sm:text-xl'>Berdedikasi, Efektif & Efisien, Ramah,<br></br> Kreatif, Amanah, dan Harmonis</p>
-                            </div>
+                        </div>
+                    </div>
+                    <div className="w-full flex justify-center bg-[#017d9e] mt-10">
+                        <div className='flex justify-center text-white py-20 text-center'>
+                            <p className='font-bold text-4xl max-lg:text-3xl max-md:text-2xl max-sm:text-xl'>Berdedikasi, Efektif & Efisien, Ramah,<br></br> Kreatif, Amanah, dan Harmonis</p>
                         </div>
                     </div>
                     <div className="w-full flex justify-center">
                         <div className="px-5 sm:px-20 justify-center w-[1520px]">
                             <div className="grid grid-cols-2 gap-20 max-md:grid-cols-1 p-20 max-md:px-5 text-justify">
-                                <p>Kami membangun budaya kerja yang <span className='text-[#017d9e]'>berdedikasi</span> dan profesional dengan berpegang teguh pada nilai ibadah, mengutamakan <span className='text-[#017d9e]'>efektivitas dan efisiensi</span>, serta bekerja cerdas dan tuntas. Setiap layanan diberikan dengan sikap <span className='text-[#017d9e]'>ramah</span>, sikap positif, dan perhatian penuh kepada customer.</p>
-                                <p>Kami terus berinovasi secara <span className='text-[#017d9e]'>kreatif</span> untuk menghadirkan solusi sesuai kebutuhan pasar, menjaga <span className='text-[#017d9e]'>amanah</span> dalam setiap tanggung jawab yang diemban, dan membangun suasana kerja yang <span className='text-[#017d9e]'>harmonis</span>, saling mendukung, serta berjuang bersama dalam tim.</p>
+                                <p>Kami membangun budaya kerja yang <span className='text-[#017d9e] font-bold'>berdedikasi</span> dan profesional dengan berpegang teguh pada nilai ibadah, mengutamakan <span className='text-[#017d9e] font-bold'>efektivitas dan efisiensi</span>, serta bekerja cerdas dan tuntas. Setiap layanan diberikan dengan sikap <span className='text-[#017d9e] font-bold'>ramah</span>, sikap positif, dan perhatian penuh kepada customer.</p>
+                                <p>Kami terus berinovasi secara <span className='text-[#017d9e] font-bold'>kreatif</span> untuk menghadirkan solusi sesuai kebutuhan pasar, menjaga <span className='text-[#017d9e] font-bold'>amanah</span> dalam setiap tanggung jawab yang diemban, dan membangun suasana kerja yang <span className='text-[#017d9e] font-bold'>harmonis</span>, saling mendukung, serta berjuang bersama dalam tim.</p>
                             </div>
                             <div className='flex flex-col pb-20 items-center max-lg:flex-col gap-5'>
                                 <p className='font-bold text-2xl'>Aktivitas</p>

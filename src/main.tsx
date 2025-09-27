@@ -12,6 +12,7 @@ import "primereact/resources/themes/lara-light-cyan/theme.css";
 import KontakPage from './pages/kontak_page/KontakPage';
 import AboutPage from './pages/about_page/AboutPage';
 import PortofolioPage from './pages/portofolio_page/PortofolioPage';
+import BukuCustomPage from './pages/buku_custom_page/BukuCustomPage';
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,7 @@ const router = createBrowserRouter([
       { path: "tentang-kami", element: <AboutPage /> },
       { path: "kontak", element: <KontakPage /> },
       { path: "portofolio", element: <PortofolioPage /> },
+      { path: "buku-custom", element: <BukuCustomPage /> },
       { path: "*", element: <HomePage /> },
     ],
   },
