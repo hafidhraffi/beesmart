@@ -13,6 +13,7 @@ import KontakPage from './pages/kontak_page/KontakPage';
 import AboutPage from './pages/about_page/AboutPage';
 import PortofolioPage from './pages/portofolio_page/PortofolioPage';
 import BukuCustomPage from './pages/buku_custom_page/BukuCustomPage';
+import KalenderPage from './pages/kalender_page/KalenderPage';
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,7 @@ const router = createBrowserRouter([
       { path: "kontak", element: <KontakPage /> },
       { path: "portofolio", element: <PortofolioPage /> },
       { path: "buku-custom", element: <BukuCustomPage /> },
+      { path: "kalender", element: <KalenderPage /> },
       { path: "*", element: <HomePage /> },
     ],
   },

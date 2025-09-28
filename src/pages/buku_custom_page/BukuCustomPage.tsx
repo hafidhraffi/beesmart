@@ -25,7 +25,7 @@ function BukuCustomPage() {
             <div className="w-full flex justify-center bg-gradient-to-r from-[#004253] to-[#2fb9de]">
                 <div className="px-5 sm:px-20 w-[1520px] h-[550px] flex flex-col gap-10 justify-center items-center text-white">
                     <p className="text-5xl font-semibold max-sm:text-2xl max-md:text-3xl max-lg:text-4xl">Buku Custom.</p>
-                    <p className="max-w-[750px] text-xl text-center leading-8">
+                    <p className="max-w-[750px] text-xl max-lg:text-lg max-md:text-base text-center leading-8">
                         Di BeeSmart, kami menyediakan layanan percetakan buku custom dengan kualitas premium untuk memenuhi kebutuhan perusahaan, instansi, sekolah, maupun individu. Semua proses kami kerjakan dengan detail mulai dari desain, layout, hingga hasil cetak, sehingga setiap buku bukan hanya media informasi, tapi juga representasi profesionalitas Anda.
                     </p>
                 </div>
@@ -105,7 +105,7 @@ function BukuCustomPage() {
                     </div>
                     <div className='my-20 flex flex-col items-center gap-1'>
                         <p className='font-bold text-3xl'>Kenapa Memilih</p>
-                        <p className='text-xl'><span className='font-bold'>BeeSmart</span> untuk Cetak Buku Custom?</p>
+                        <p className='text-xl text-center'><span className='font-bold'>BeeSmart</span> untuk Cetak Buku Custom?</p>
                         <div className='mt-10 flex flex-wrap gap-10 justify-evenly w-full'>
                             <img src={kualitas} className='h-[250px] hover:scale-105 transition-all' />
                             <img src={desain} className='h-[250px] hover:scale-105 transition-all' />
@@ -127,7 +127,7 @@ function BukuCustomPage() {
                             <img src={port8} className='h-[300px] max-md:h-[180px] max-sm:h-[120px] max-lg:h-[220px]' />
                         </div>
                     </div>
-                    <div className="flex flex-col items-center mt-32">
+                    <div className="flex flex-col items-center mt-32 text-center">
                         <p className="text-3xl"><span className='font-bold'>Ayo Wujudkan</span> Buku Custom Impian Anda!</p>
                         <p className="text-center text-xl">Jadikan buku Anda bukan sekedar bacaan, tetapi juga media branding & representasi profesional.</p>
                     </div>

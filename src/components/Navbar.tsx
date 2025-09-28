@@ -18,7 +18,8 @@ export default function Navbar() {
     const { pathname } = useLocation();
     const pathWithOpacityNavbar = [
         '/',
-        '/buku-custom'
+        '/buku-custom',
+        '/kalender'
     ]
     const pages = [
         { path: "/", text: "Beranda", },

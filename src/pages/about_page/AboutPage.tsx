@@ -21,14 +21,14 @@ function AboutPage() {
                 <>
                     <div className="w-full flex justify-center">
                         <div className="justify-center w-[1520px]">
-                            <div className="pt-28 flex justify-evenly max-lg:pt-36">
-                                <div className="text-justify flex flex-col gap-10 max-w-[700px]">
+                            <div className="pt-28 flex justify-evenly items-center max-lg:flex-col max-lg:pt-36 gap-10 px-10 max-md:pt-24">
+                                <div className="text-justify flex flex-col gap-10 max-w-[700px] max-xl:max-w-[600px]">
                                     <p className="text-4xl font-bold">Tentang Kami</p>
                                     <p>Beesmart Solusi Media adalah perusahaan Kreatif di bidang desain dan cetak yang telah berdiri sejak tahun 2015. Lebih dari 8 tahun berpengalaman menyelesaikan project–project besar kebutuhan desain dan cetak berbagai instansi dan perusahaan.</p>
                                     <p>Pemahaman terhadap desain yang dipadukan dengan target market yang akurat serta disesuaikan dengan media cetak menjadi solusi untuk merespon setiap tantangan kompetisi bisnis saat ini. Oleh karena itu kami mengutamakan kreativitas, strategi dan ide-ide segar dalam menghasilkan desain yang relevan dengan kebutuhan yang direalisasikan dalam bentuk media cetak dan promosi.</p>
                                 </div>
-                                <div>
-                                    <img src={TeamImage} className='h-[350px] rounded-4xl' />
+                                <div className='shrink-0'>
+                                    <img src={TeamImage} className='h-[350px] max-xl:h-[300px] max-md:h-[250px] max-sm:h-[200px] rounded-4xl' />
                                 </div>
                             </div>
                         </div>

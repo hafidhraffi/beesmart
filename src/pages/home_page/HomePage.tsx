@@ -139,7 +139,7 @@ function HomePage() {
                                                             <li>Kalender Meja</li>
                                                         </ul>
                                                     </div>
-                                                    <div className='flex bg-white rounded-full w-fit py-2 px-3 text-[#017d9e] items-center gap-2 cursor-pointer active:scale-95 hover:shadow hover:shadow-white transition-all'>
+                                                    <div onClick={() => navigate("/kalender")} className='flex bg-white rounded-full w-fit py-2 px-3 text-[#017d9e] items-center gap-2 cursor-pointer active:scale-95 hover:shadow hover:shadow-white transition-all'>
                                                         <p>Detail</p>
                                                         <ArrowRightIcon className='h-5' />
                                                     </div>
