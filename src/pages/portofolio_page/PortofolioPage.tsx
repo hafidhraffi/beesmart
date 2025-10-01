@@ -56,7 +56,7 @@ function PortofolioPage() {
         <>
             <Helmet>
                 <meta charSet="utf-8" />
-                <title>Portofolio Beesmart - Contoh Percetakan Buku, Kalender, dan Majalah</title>
+                <title>Portofolio Beesmart - Contoh Buku, Kalender, Majalah, dan lainnya</title>
                 <link rel="canonical" href="https://beesmart-gamma.vercel.app/portofolio" />
                 <meta name="description" content="Lihat portofolio Beesmart Solusi Media, perusahaan percetakan profesional yang telah menghasilkan berbagai buku, kalender, majalah, dan produk cetak berkualitas tinggi. Temukan inspirasi dari hasil karya kami." />
                 <meta name="keywords" content="Beesmart Solusi Media, portofolio percetakan, percetakan buku, percetakan kalender, percetakan majalah, hasil cetak profesional" />
