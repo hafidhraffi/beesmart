@@ -20,7 +20,7 @@ function AboutPage() {
         <>
             <Helmet>
                 <meta charSet="utf-8" />
-                <title>Tentang Beesmart Solusi Media - Percetakan Profesional dan Terpercaya</title>
+                <title>Tentang Beesmart - Percetakan Profesional dan Terpercaya</title>
                 <link rel="canonical" href="https://beesmart-gamma.vercel.app/tentang-kami" />
                 <meta name="description" content="Beesmart Solusi Media adalah perusahaan percetakan profesional yang berpengalaman dalam mencetak buku, kalender, majalah, dan produk cetak lainnya. Kami berkomitmen memberikan kualitas terbaik dan layanan terpercaya untuk setiap pelanggan." />
                 <meta name="keywords" content="Beesmart Solusi Media, percetakan profesional, percetakan buku, percetakan kalender, percetakan majalah, perusahaan percetakan terpercaya" />

@@ -97,7 +97,7 @@ function KalenderPage() {
         <>
             <Helmet>
                 <meta charSet="utf-8" />
-                <title>Kalender Beesmart Solusi Media - Percetakan Kalender Sesuai Keinginan</title>
+                <title>Kalender Beesmart - Percetakan Kalender Berkualitas</title>
                 <link rel="canonical" href="https://beesmart-gamma.vercel.app/kalender" />
                 <meta name="description" content="Beesmart Solusi Media menyediakan layanan percetakan kalender sesuai keinginan Anda. Desain unik, kualitas cetak terbaik, dan layanan profesional." />
                 <meta name="keywords" content="Beesmart Solusi Media, percetakan kalender, kalender sesuai keinginan, jasa cetak kalender, percetakan profesional" />
