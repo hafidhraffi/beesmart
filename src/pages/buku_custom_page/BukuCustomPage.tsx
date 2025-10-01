@@ -17,11 +17,19 @@ import port6 from '../../assets/custom6.png'
 import port7 from '../../assets/custom7.png'
 import port8 from '../../assets/custom8.png'
 import ContactForm from '../../components/ContactForm'
+import { Helmet } from "react-helmet"
 
 function BukuCustomPage() {
 
     return (
         <>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>Buku Custom Beesmart Solusi Media - Percetakan Buku Sesuai Keinginan</title>
+                <link rel="canonical" href="https://beesmart-gamma.vercel.app/buku-custom" />
+                <meta name="description" content="Beesmart Solusi Media menyediakan layanan percetakan buku custom sesuai keinginan Anda. Desain unik, kualitas cetak terbaik, dan layanan profesional untuk buku pribadi, corporate, atau penerbitan skala kecil hingga besar." />
+                <meta name="keywords" content="Beesmart Solusi Media, percetakan buku custom, buku sesuai keinginan, jasa cetak buku, buku personalisasi, percetakan profesional" />
+            </Helmet>
             <div className="w-full flex justify-center bg-gradient-to-r from-[#004253] to-[#2fb9de]">
                 <div className="px-5 sm:px-20 w-[1520px] h-[550px] flex flex-col gap-10 justify-center items-center text-white">
                     <p className="text-5xl font-semibold max-sm:text-2xl max-md:text-3xl max-lg:text-4xl">Buku Custom.</p>
@@ -31,75 +39,85 @@ function BukuCustomPage() {
                 </div>
             </div>
             <div className="w-full flex justify-center">
-                <div className="px-5 sm:px-20 w-[1520px]">
+                <div className="px-5 sm:px-20 w-[1520px] flex flex-col items-center">
                     <div className="flex flex-col items-center gap-5 my-10">
                         <p className="text-3xl font-bold">Jenis Buku</p>
                         <p className="text-center max-w-[750px]">Temukan berbagai jenis buku yang dapat kami cetak sesuai kebutuhan Anda. Semua kami hadirkan dengan kualitas cetak terbaik dan detail yang terjaga, agar setiap halaman tak hanya informatif, tetapi juga berkesan.</p>
                     </div>
-                    <div className='flex flex-wrap justify-evenly gap-x-5 gap-y-10'>
-                        <div className='border-2 max-sm:flex-col flex max-w-[550px] max-sm:max-w-[300px] max-md:max-w-[400px]'>
-                            <div className='flex sm:w-[500px] max-sm:h-[200px]'>
-                                <img src={compProfile} className='object-cover' />
-                            </div>
-                            <div className='flex flex-col gap-3 p-5'>
-                                <p className='font-bold text-[#017d9e] text-xl'>Company Profile</p>
-                                <p>Fungsi:</p>
-                                <ul className='list-disc pl-5'>
-                                    <li>Membangun citra perusahaan agar terlihat profesional di mata klien & investor.</li>
-                                    <li>Menjadi alat presentasi yang elegan saat meeting, pameran, atau tender proyek.</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div className='border-2 max-sm:flex-col flex max-w-[550px] max-sm:max-w-[300px] max-md:max-w-[400px]'>
-                            <div className='flex sm:w-[500px] max-sm:h-[200px]'>
-                                <img src={bukuTugas} className='object-cover' />
-                            </div>
-                            <div className='flex flex-col gap-3 p-5'>
-                                <p className='font-bold text-[#017d9e] text-xl'>Buku Tugas</p>
-                                <p>Fungsi:</p>
-                                <ul className='list-disc pl-5'>
-                                    <li>Membantu siswa, mahasiswa, atau peserta pelatihan dalam menyelesaikan tugas.</li>
-                                    <li>Bisa digunakan sebagai buku catatan kerja (log book).</li>
-                                </ul>
+                    <div className='grid grid-cols-2 max-[1280px]:grid-cols-1 gap-x-5 gap-y-10 w-full'>
+                        <div className='flex justify-center'>
+                            <div className='border-2 max-sm:flex-col flex max-w-[550px] max-sm:max-w-[300px] max-md:max-w-[400px]'>
+                                <div className='flex sm:w-[500px] max-sm:h-[200px]'>
+                                    <img src={compProfile} className='object-cover' />
+                                </div>
+                                <div className='flex flex-col gap-3 p-5'>
+                                    <p className='font-bold text-[#017d9e] text-xl'>Company Profile</p>
+                                    <p>Fungsi:</p>
+                                    <ul className='list-disc pl-5'>
+                                        <li>Membangun citra perusahaan agar terlihat profesional di mata klien & investor.</li>
+                                        <li>Menjadi alat presentasi yang elegan saat meeting, pameran, atau tender proyek.</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                        <div className='border-2 max-sm:flex-col flex max-w-[550px] max-sm:max-w-[300px] max-md:max-w-[400px]'>
-                            <div className='flex sm:w-[500px] max-sm:h-[200px]'>
-                                <img src={bukuAjar} className='object-cover' />
-                            </div>
-                            <div className='flex flex-col gap-3 p-5'>
-                                <p className='font-bold text-[#017d9e] text-xl'>Buku Ajar</p>
-                                <p>Fungsi:</p>
-                                <ul className='list-disc pl-5'>
-                                    <li>Mendukung kegiatan belajar mengajar di sekolah, kampus, maupun lembaga kursus.</li>
-                                    <li>Menjadi pedoman resmi bagi siswa/mahasiswa dalam menyerap materi.</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div className='border-2 max-sm:flex-col flex max-w-[550px] max-sm:max-w-[300px] max-md:max-w-[400px]'>
-                            <div className='flex sm:w-[500px] max-sm:h-[200px]'>
-                                <img src={bukuKarangan} className='object-cover' />
-                            </div>
-                            <div className='flex flex-col gap-3 p-5'>
-                                <p className='font-bold text-[#017d9e] text-xl'>Buku Karangan Penulis</p>
-                                <p>Fungsi:</p>
-                                <ul className='list-disc pl-5'>
-                                    <li>Wadah bagi penulis untuk mempublikasikan karya mereka secara profesional.</li>
-                                    <li>Bisa digunakan untuk keperluan penerbitan indie maupun personal.</li>
-                                </ul>
+                        <div className='flex justify-center'>
+                            <div className='border-2 max-sm:flex-col flex max-w-[550px] max-sm:max-w-[300px] max-md:max-w-[400px]'>
+                                <div className='flex sm:w-[500px] max-sm:h-[200px]'>
+                                    <img src={bukuTugas} className='object-cover' />
+                                </div>
+                                <div className='flex flex-col gap-3 p-5'>
+                                    <p className='font-bold text-[#017d9e] text-xl'>Buku Tugas</p>
+                                    <p>Fungsi:</p>
+                                    <ul className='list-disc pl-5'>
+                                        <li>Membantu siswa, mahasiswa, atau peserta pelatihan dalam menyelesaikan tugas.</li>
+                                        <li>Bisa digunakan sebagai buku catatan kerja (log book).</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                        <div className='border-2 max-sm:flex-col flex max-w-[550px] max-sm:max-w-[300px] max-md:max-w-[400px]'>
-                            <div className='flex sm:w-[500px] max-sm:h-[200px]'>
-                                <img src={bukuModul} className='object-cover' />
+                        <div className='flex justify-center'>
+                            <div className='border-2 max-sm:flex-col flex max-w-[550px] max-sm:max-w-[300px] max-md:max-w-[400px]'>
+                                <div className='flex sm:w-[500px] max-sm:h-[200px]'>
+                                    <img src={bukuAjar} className='object-cover' />
+                                </div>
+                                <div className='flex flex-col gap-3 p-5'>
+                                    <p className='font-bold text-[#017d9e] text-xl'>Buku Ajar</p>
+                                    <p>Fungsi:</p>
+                                    <ul className='list-disc pl-5'>
+                                        <li>Mendukung kegiatan belajar mengajar di sekolah, kampus, maupun lembaga kursus.</li>
+                                        <li>Menjadi pedoman resmi bagi siswa/mahasiswa dalam menyerap materi.</li>
+                                    </ul>
+                                </div>
                             </div>
-                            <div className='flex flex-col gap-3 p-5'>
-                                <p className='font-bold text-[#017d9e] text-xl'>Buku Modul</p>
-                                <p>Fungsi:</p>
-                                <ul className='list-disc pl-5'>
-                                    <li>Sebagai panduan peserta dalam mengikuti pelatihan, seminar, atau workshop.</li>
-                                    <li>Memberikan nilai tambah agar program training terlihat profesional.</li>
-                                </ul>
+                        </div>
+                        <div className='flex justify-center'>
+                            <div className='border-2 max-sm:flex-col flex max-w-[550px] max-sm:max-w-[300px] max-md:max-w-[400px]'>
+                                <div className='flex sm:w-[500px] max-sm:h-[200px]'>
+                                    <img src={bukuKarangan} className='object-cover' />
+                                </div>
+                                <div className='flex flex-col gap-3 p-5'>
+                                    <p className='font-bold text-[#017d9e] text-xl'>Buku Karangan Penulis</p>
+                                    <p>Fungsi:</p>
+                                    <ul className='list-disc pl-5'>
+                                        <li>Wadah bagi penulis untuk mempublikasikan karya mereka secara profesional.</li>
+                                        <li>Bisa digunakan untuk keperluan penerbitan indie maupun personal.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div className='flex justify-center'>
+                            <div className='border-2 max-sm:flex-col flex max-w-[550px] max-sm:max-w-[300px] max-md:max-w-[400px]'>
+                                <div className='flex sm:w-[500px] max-sm:h-[200px]'>
+                                    <img src={bukuModul} className='object-cover' />
+                                </div>
+                                <div className='flex flex-col gap-3 p-5'>
+                                    <p className='font-bold text-[#017d9e] text-xl'>Buku Modul</p>
+                                    <p>Fungsi:</p>
+                                    <ul className='list-disc pl-5'>
+                                        <li>Sebagai panduan peserta dalam mengikuti pelatihan, seminar, atau workshop.</li>
+                                        <li>Memberikan nilai tambah agar program training terlihat profesional.</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>

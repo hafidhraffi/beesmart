@@ -20,6 +20,7 @@ import meja8 from '../../assets/meja8.png'
 import ukuran1 from '../../assets/ukuran1.png'
 import ukuran2 from '../../assets/ukuran2.png'
 import ukuran3 from '../../assets/ukuran3.png'
+import { Helmet } from "react-helmet"
 
 function KalenderPage() {
     const portofolioDinding = [
@@ -94,6 +95,13 @@ function KalenderPage() {
 
     return (
         <>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>Kalender Beesmart Solusi Media - Percetakan Kalender Sesuai Keinginan</title>
+                <link rel="canonical" href="https://beesmart-gamma.vercel.app/kalender" />
+                <meta name="description" content="Beesmart Solusi Media menyediakan layanan percetakan kalender sesuai keinginan Anda. Desain unik, kualitas cetak terbaik, dan layanan profesional." />
+                <meta name="keywords" content="Beesmart Solusi Media, percetakan kalender, kalender sesuai keinginan, jasa cetak kalender, percetakan profesional" />
+            </Helmet>
             <div className="w-full flex justify-center bg-gradient-to-r from-[#004253] to-[#2fb9de]">
                 <div className="px-5 sm:px-20 w-[1520px] h-[550px] flex flex-col gap-10 justify-center items-center text-white">
                     <p className="text-5xl font-semibold max-sm:text-2xl max-md:text-3xl max-lg:text-4xl">Kalender.</p>
@@ -108,32 +116,36 @@ function KalenderPage() {
                         <p className="text-3xl font-bold">Jenis Kalender</p>
                         <p className="text-center max-w-[750px]">Temukan berbagai jenis kalender yang dapat kami cetak sesuai kebutuhan Anda. Semua kami hadirkan dengan kualitas cetak terbaik dan detail yang terjaga, agar setiap lembar tak hanya informatif, tetapi juga berkesan.</p>
                     </div>
-                    <div className='flex flex-wrap justify-evenly gap-x-5 gap-y-10'>
-                        <div className='border-2 max-sm:flex-col flex max-w-[550px] max-sm:max-w-[300px] max-md:max-w-[400px]'>
-                            <div className='flex sm:w-[500px] max-sm:h-[200px]'>
-                                <img src={dinding} className='object-cover' />
-                            </div>
-                            <div className='flex flex-col gap-3 p-5'>
-                                <p className='font-bold text-[#017d9e] text-xl'>Kalender Dinding</p>
-                                <p>Fungsi:</p>
-                                <ul className='list-disc pl-5'>
-                                    <li>Ukuran besar, dapat dilihat dari jarak jauh.</li>
-                                    <li>Dengan desain custom, kalender dinding bisa jadi identitas dan branding instansi Anda.</li>
-                                    <li>Sering digunakan sebagai hadiah atau merchandise promosi.</li>
-                                </ul>
+                    <div className='grid grid-cols-2 max-[1280px]:grid-cols-1 gap-x-5 gap-y-10 w-full'>
+                        <div className='flex justify-center'>
+                            <div className='border-2 max-sm:flex-col flex max-w-[550px] max-sm:max-w-[300px] max-md:max-w-[400px]'>
+                                <div className='flex sm:w-[500px] max-sm:h-[200px]'>
+                                    <img src={dinding} className='object-cover' />
+                                </div>
+                                <div className='flex flex-col gap-3 p-5'>
+                                    <p className='font-bold text-[#017d9e] text-xl'>Kalender Dinding</p>
+                                    <p>Fungsi:</p>
+                                    <ul className='list-disc pl-5'>
+                                        <li>Ukuran besar, dapat dilihat dari jarak jauh.</li>
+                                        <li>Dengan desain custom, kalender dinding bisa jadi identitas dan branding instansi Anda.</li>
+                                        <li>Sering digunakan sebagai hadiah atau merchandise promosi.</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                        <div className='border-2 max-sm:flex-col flex max-w-[550px] max-sm:max-w-[300px] max-md:max-w-[400px]'>
-                            <div className='flex sm:w-[500px] max-sm:h-[200px]'>
-                                <img src={meja} className='object-cover' />
-                            </div>
-                            <div className='flex flex-col gap-3 p-5'>
-                                <p className='font-bold text-[#017d9e] text-xl'>Kalender Meja</p>
-                                <p>Fungsi:</p>
-                                <ul className='list-disc pl-5'>
-                                    <li>Sebagai media promosi elegan, karena selalu ada di depan mata klien atau relasi.</li>
-                                    <li>Menjadi pengingat deadline, jadwal meeting, dan aktivitas penting.</li>
-                                </ul>
+                        <div className='flex justify-center'>
+                            <div className='border-2 max-sm:flex-col flex max-w-[550px] max-sm:max-w-[300px] max-md:max-w-[400px]'>
+                                <div className='flex sm:w-[500px] max-sm:h-[200px]'>
+                                    <img src={meja} className='object-cover' />
+                                </div>
+                                <div className='flex flex-col gap-3 p-5'>
+                                    <p className='font-bold text-[#017d9e] text-xl'>Kalender Meja</p>
+                                    <p>Fungsi:</p>
+                                    <ul className='list-disc pl-5'>
+                                        <li>Sebagai media promosi elegan, karena selalu ada di depan mata klien atau relasi.</li>
+                                        <li>Menjadi pengingat deadline, jadwal meeting, dan aktivitas penting.</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>

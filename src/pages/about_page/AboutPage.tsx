@@ -3,6 +3,7 @@ import { useQuery } from '@tanstack/react-query'
 import TeamImage from '../../assets/team.png'
 import api from '../../services/api'
 import TestimonialCard from '../home_page/TestimonialCard'
+import { Helmet } from "react-helmet"
 
 function AboutPage() {
     const fetchAboutPageData = async () => {
@@ -17,6 +18,13 @@ function AboutPage() {
 
     return (
         <>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>Tentang Beesmart Solusi Media - Percetakan Profesional dan Terpercaya</title>
+                <link rel="canonical" href="https://beesmart-gamma.vercel.app/tentang-kami" />
+                <meta name="description" content="Beesmart Solusi Media adalah perusahaan percetakan profesional yang berpengalaman dalam mencetak buku, kalender, majalah, dan produk cetak lainnya. Kami berkomitmen memberikan kualitas terbaik dan layanan terpercaya untuk setiap pelanggan." />
+                <meta name="keywords" content="Beesmart Solusi Media, percetakan profesional, percetakan buku, percetakan kalender, percetakan majalah, perusahaan percetakan terpercaya" />
+            </Helmet>
             {data ? (
                 <>
                     <div className="w-full flex justify-center">
@@ -55,11 +63,13 @@ function AboutPage() {
                             <div className='flex flex-col pb-20 items-center max-lg:flex-col gap-5'>
                                 <p className='font-bold text-2xl'>Testimoni</p>
                                 <p className='text-base text-justify'>Dengarkan Apa Kata Klien Kami</p>
-                                <div className='grid grid-cols-3 max-lg:grid-cols-2 max-md:grid-cols-1 gap-10'>
+                                <div className='grid grid-cols-3 max-[1150px]:grid-cols-2 max-[810px]:grid-cols-1 gap-10 w-full'>
                                     {
                                         data.testimoni.map((element: any, index: number) => {
                                             return (
-                                                <TestimonialCard key={index} profilePic={element.foto_url} rating={element.bintang} username={element.nama} timeDesc={element.waktu} testimonialDesc={element.isi} link={element.link} />
+                                                <div className='flex w-full justify-center'>
+                                                    <TestimonialCard key={index} profilePic={element.foto_url} rating={element.bintang} username={element.nama} timeDesc={element.waktu} testimonialDesc={element.isi} link={element.link} />
+                                                </div>
                                             )
                                         })
                                     }

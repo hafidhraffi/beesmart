@@ -4,6 +4,7 @@ import PortfolioCard from "../home_page/PortfolioCard"
 import { InputText } from "primereact/inputtext"
 import { MagnifyingGlassIcon } from '@heroicons/react/20/solid'
 import { useState } from "react"
+import { Helmet } from "react-helmet"
 
 type PortofolioType = {
     _id: string,
@@ -53,6 +54,13 @@ function PortofolioPage() {
 
     return (
         <>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>Portofolio Beesmart Solusi Media - Contoh Percetakan Buku, Kalender, dan Majalah</title>
+                <link rel="canonical" href="https://beesmart-gamma.vercel.app/portofolio" />
+                <meta name="description" content="Lihat portofolio Beesmart Solusi Media, perusahaan percetakan profesional yang telah menghasilkan berbagai buku, kalender, majalah, dan produk cetak berkualitas tinggi. Temukan inspirasi dari hasil karya kami." />
+                <meta name="keywords" content="Beesmart Solusi Media, portofolio percetakan, percetakan buku, percetakan kalender, percetakan majalah, hasil cetak profesional" />
+            </Helmet>
             {data ? (
                 <>
                     <div className="w-full flex justify-center">

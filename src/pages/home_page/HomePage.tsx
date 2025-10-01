@@ -21,6 +21,7 @@ import { useQuery } from '@tanstack/react-query'
 import type { HomePageData } from '../../types/homePageData'
 import ClientCarousel from './ClientCarousel'
 import { useNavigate } from 'react-router'
+import { Helmet } from "react-helmet"
 
 function HomePage() {
     const navigate = useNavigate()
@@ -36,6 +37,13 @@ function HomePage() {
 
     return (
         <>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>Beesmart Solusi Media - Percetakan Buku, Kalender, dan Majalah Berkualitas</title>
+                <link rel="canonical" href="https://beesmart-gamma.vercel.app/" />
+                <meta name="description" content="Beesmart Solusi Media menyediakan layanan percetakan profesional untuk buku, kalender, majalah, dan produk cetak lainnya dengan kualitas terbaik dan layanan terpercaya." />
+                <meta name="keywords" content="Beesmart Solusi Media, percetakan buku, percetakan kalender, percetakan majalah, jasa cetak profesional, percetakan terpercaya" />
+            </Helmet>
             {
                 data ?
                     <>
@@ -89,7 +97,7 @@ function HomePage() {
                                     <p className='font-bold text-2xl text-black'>Layanan</p>
                                     <div className='grid grid-cols-2 max-[1180px]:grid-cols-1 gap-y-10 w-full max-lg:gap-x-10'>
                                         <div className='flex justify-center'>
-                                            <div className='h-[250px] w-full max-w-[500px] bg-[#017d9e] flex justify-between gap-10 max-sm:flex-col max-sm:h-fit max-sm:gap-5'>
+                                            <div className='h-[250px] w-full max-sm:max-w-[400px] max-w-[500px] bg-[#017d9e] flex justify-between gap-10 max-sm:flex-col-reverse max-sm:h-fit max-sm:gap-5'>
                                                 <div className='flex flex-col justify-between gap-5 py-5 pl-10'>
                                                     <div className='flex flex-col gap-2'>
                                                         <p className='font-bold text-xl'>Buku Custom</p>
@@ -110,7 +118,7 @@ function HomePage() {
                                             </div>
                                         </div>
                                         <div className='flex justify-center'>
-                                            <div className='h-[250px] w-full max-w-[500px] bg-[#017d9e] flex justify-between gap-10 max-sm:flex-col max-sm:h-fit max-sm:gap-5'>
+                                            <div className='h-[250px] w-full max-sm:max-w-[400px] max-w-[500px] bg-[#017d9e] flex justify-between gap-10 max-sm:flex-col-reverse max-sm:h-fit max-sm:gap-5'>
                                                 <div className='flex flex-col justify-between gap-5 py-5 pl-10'>
                                                     <div className='flex flex-col gap-2'>
                                                         <p className='font-bold text-xl'>Buku Tahunan Sekolah</p>
@@ -130,7 +138,7 @@ function HomePage() {
                                             </div>
                                         </div>
                                         <div className='flex justify-center'>
-                                            <div className='h-[250px] w-full max-w-[500px] bg-[#017d9e] flex justify-between gap-10 max-sm:flex-col max-sm:h-fit max-sm:gap-5'>
+                                            <div className='h-[250px] w-full max-sm:max-w-[400px] max-w-[500px] bg-[#017d9e] flex justify-between gap-10 max-sm:flex-col-reverse max-sm:h-fit max-sm:gap-5'>
                                                 <div className='flex flex-col justify-between gap-5 py-5 pl-10'>
                                                     <div className='flex flex-col gap-2'>
                                                         <p className='font-bold text-xl'>Kalender</p>
@@ -148,7 +156,7 @@ function HomePage() {
                                             </div>
                                         </div>
                                         <div className='flex justify-center'>
-                                            <div className='h-[250px] w-full max-w-[500px] bg-[#017d9e] flex justify-between gap-10 max-sm:flex-col max-sm:h-fit max-sm:gap-5'>
+                                            <div className='h-[250px] w-full max-sm:max-w-[400px] max-w-[500px] bg-[#017d9e] flex justify-between gap-10 max-sm:flex-col-reverse max-sm:h-fit max-sm:gap-5'>
                                                 <div className='flex flex-col justify-between gap-5 py-5 pl-10'>
                                                     <div className='flex flex-col gap-2'>
                                                         <p className='font-bold text-xl'>Majalah</p>
@@ -172,27 +180,27 @@ function HomePage() {
                                 <div className='flex flex-col py-20 items-center gap-10'>
                                     <p className='text-3xl font-bold'>Layanan Gratis</p>
                                     <div className='flex flex-wrap justify-evenly w-full gap-5'>
-                                        <div className='flex flex-col items-center text-center gap-5 max-w-[200px]'>
+                                        <div className='flex flex-col items-center text-center gap-5 max-w-[200px] hover:scale-105 transition-all'>
                                             <img src={konsulBrand} className='h-24' />
                                             <p className='text-[#017d9e] font-bold text-xl'>Konsultasi Branding</p>
                                             <p>Gratis layanan konsultasi branding</p>
                                         </div>
-                                        <div className='flex flex-col items-center text-center gap-5 max-w-[200px]'>
+                                        <div className='flex flex-col items-center text-center gap-5 max-w-[200px] hover:scale-105 transition-all'>
                                             <img src={konsulBudget} className='h-24' />
                                             <p className='text-[#017d9e] font-bold text-xl'>Konsultasi Budgeting</p>
                                             <p>Gratis Layanan konsultasi budgeting cetak</p>
                                         </div>
-                                        <div className='flex flex-col items-center text-center gap-5 max-w-[200px]'>
+                                        <div className='flex flex-col items-center text-center gap-5 max-w-[200px] hover:scale-105 transition-all'>
                                             <img src={desain} className='h-24' />
                                             <p className='text-[#017d9e] font-bold text-xl'>Desain</p>
                                             <p>Gratis Desain untuk  project cetak senilai minimal 15 juta</p>
                                         </div>
-                                        <div className='flex flex-col items-center text-center gap-5 max-w-[200px]'>
+                                        <div className='flex flex-col items-center text-center gap-5 max-w-[200px] hover:scale-105 transition-all'>
                                             <img src={kunjungan} className='h-24' />
                                             <p className='text-[#017d9e] font-bold text-xl'>Kunjungan</p>
                                             <p>Gratis kunjungan ke Instansi/perusahaan Anda untuk area Sidoarjo dan Surabaya</p>
                                         </div>
-                                        <div className='flex flex-col items-center text-center gap-5 max-w-[200px]'>
+                                        <div className='flex flex-col items-center text-center gap-5 max-w-[200px] hover:scale-105 transition-all'>
                                             <img src={pengiriman} className='h-24' />
                                             <p className='text-[#017d9e] font-bold text-xl'>Pengiriman</p>
                                             <p>Gratis pengiriman keseluruh Indonesia ( S & K berlaku )</p>
@@ -225,11 +233,13 @@ function HomePage() {
                                 </div>
                                 <div className='flex flex-col pb-20 items-center max-lg:flex-col gap-5'>
                                     <p className='font-bold text-3xl'>Kata Mereka</p>
-                                    <div className='grid grid-cols-3 max-lg:grid-cols-2 max-md:grid-cols-1 gap-10'>
+                                    <div className='grid grid-cols-3 max-[1150px]:grid-cols-2 max-[810px]:grid-cols-1 gap-10 w-full'>
                                         {
                                             data.testimoni.map((element, index) => {
                                                 return (
-                                                    <TestimonialCard key={index} profilePic={element.foto_url} rating={element.bintang} username={element.nama} timeDesc={element.waktu} testimonialDesc={element.isi} link={element.link} />
+                                                    <div className='w-full flex justify-center'>
+                                                        <TestimonialCard key={index} profilePic={element.foto_url} rating={element.bintang} username={element.nama} timeDesc={element.waktu} testimonialDesc={element.isi} link={element.link} />
+                                                    </div>
                                                 )
                                             })
                                         }

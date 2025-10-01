@@ -11,7 +11,7 @@ function TestimonialCard({ profilePic, rating, username, timeDesc, testimonialDe
     }
 
     return (
-        <div className='h-fit shadow-xl shadow-gray-400 rounded-2xl p-3 flex flex-col justify-between gap-5'>
+        <div className='border-gray-300 border rounded-2xl p-7 flex flex-col justify-between gap-10 min-w-[320px] max-w-[320px] h-full'>
             <div className='flex gap-5'>
                 <img src={profilePic} className='h-16 w-16 rounded-full object-cover' />
                 <div className='flex flex-col justify-center gap-1 leading-3'>

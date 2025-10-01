@@ -9,6 +9,10 @@
       "destination": "https://beesmart-sm.vercel.app/blog/:path*"
     },
     {
+      "source": "/sitemap.xml",
+      "destination": "https://beesmart-sm.vercel.app/sitemap.xml"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }

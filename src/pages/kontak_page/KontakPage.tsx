@@ -1,9 +1,17 @@
 import ContactForm from '../../components/ContactForm'
+import { Helmet } from "react-helmet"
 
 function KontakPage() {
 
     return (
         <>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>Kontak Beesmart Solusi Media - Hubungi Kami untuk Layanan Percetakan</title>
+                <link rel="canonical" href="https://beesmart-gamma.vercel.app/kontak" />
+                <meta name="description" content="Hubungi Beesmart Solusi Media, perusahaan percetakan profesional untuk buku, kalender, dan majalah. Isi form pesan, temukan alamat kami, atau lihat lokasi di peta untuk konsultasi dan pemesanan." />
+                <meta name="keywords" content="Beesmart Solusi Media, kontak percetakan, hubungi percetakan, form pesan, alamat percetakan, lokasi perusahaan, percetakan buku, percetakan kalender, percetakan majalah" />
+            </Helmet>
             <div className="bg-[#017d9e] w-full flex justify-center">
                 <div className="flex justify-center">
                     <div className="pt-16 flex gap-20 items-center max-lg:flex-col max-lg:pt-20">
@@ -31,10 +39,10 @@ function KontakPage() {
                                 <a href="mailto:beesmartsm@gmail.com" className="underline">beesmartsm@gmail.com</a>
                             </div>
                         </div>
-                        <div>
+                        <div className='flex w-full lg:max-w-[550px] h-[400px]'>
                             <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7521.923835521716!2d112.5921406!3d-7.3832289!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e780846d5411d85%3A0xd40a5ec5bb9c2594!2sCV.%20BeeSmart%20Solusi%20Media%20(%20Cetak%20Buku%20PoD%2C%20Cetak%20Kalender%20Murah%2C%20Cetak%20Buku%20Ajar%2C%20Cetak%20Blocknote!5e1!3m2!1sen!2sid!4v1755584332273!5m2!1sen!2sid"
-                                className='w-[550px] h-[400px] max-md:w-[400px] max-md:h-[300px] max-sm:w-[300px] max-sm:h-[180px]'
+                                className='w-full h-full'
                                 style={{ border: 0 }}
                                 allowFullScreen
                                 loading="lazy"
