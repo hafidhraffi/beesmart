@@ -1,7 +1,19 @@
+import { useMutation } from '@tanstack/react-query'
 import ContactForm from '../../components/ContactForm'
 import { Helmet } from "react-helmet"
+import api from '../../services/api'
 
 function KontakPage() {
+
+    const visitWa = useMutation({
+        mutationFn: async () => {
+            return await api.post('/visit?layanan=whatsapp')
+        },
+    })
+
+    function onVisitWa() {
+        visitWa.mutate()
+    }
 
     return (
         <>
@@ -23,7 +35,7 @@ function KontakPage() {
                             <div className="grid grid-cols-2">
                                 <div>
                                     <p className="font-bold">Nomor Telepon</p>
-                                    <a href="https://wa.me/6281282008045" className="underline">0812-8200-8045</a>
+                                    <a href="https://wa.me/6281282008045" onClick={onVisitWa} className="underline">0812-8200-8045</a>
                                 </div>
                                 <div>
                                     <p className="font-bold">Media Sosial</p>

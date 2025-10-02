@@ -29,9 +29,6 @@ function BukuCustomPage() {
         mutationFn: async () => {
             return await api.post('/visit?layanan=buku')
         },
-        onSuccess: () => {
-            console.log("yeah")
-        }
     })
 
     useEffect(() => {

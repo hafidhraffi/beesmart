@@ -8,6 +8,8 @@ import ttIcon from '../assets/tt_icon.png'
 import fbIcon from '../assets/fb_icon.png'
 import waIcon from '../assets/wa_icon.png'
 import waIconW from '../assets/wa_icon_white.png'
+import { useMutation } from '@tanstack/react-query'
+import api from '../services/api'
 
 export default function Navbar() {
     const navigate = useNavigate()
@@ -52,6 +54,16 @@ export default function Navbar() {
         }
     }, [useOpacity]);
 
+    const visitWa = useMutation({
+        mutationFn: async () => {
+            return await api.post('/visit?layanan=whatsapp')
+        },
+    })
+
+    function onVisitWa() {
+        visitWa.mutate()
+    }
+
     return (
         <>
             <div onClick={() => setShowSideBar(false)} className={`fixed h-svh w-svw z-40 transition-all duration-1000 ${showSideBar ? "bg-[rgba(0,0,0,0.4)]" : "bg-transparent pointer-events-none"}`}></div>
@@ -81,7 +93,7 @@ export default function Navbar() {
                         <a href="https://www.instagram.com/beesmart.sm/"><img src={igIcon} alt="Instagram" className="w-6 h-6 hover:scale-105 active:scale-95" /></a>
                         <a href="https://www.tiktok.com/@beesmart.co.id"><img src={ttIcon} alt="TikTok" className="w-6 h-6 hover:scale-105 active:scale-95" /></a>
                         <a href="https://www.facebook.com/BeeSmartSolusiMedia/"><img src={fbIcon} alt="Facebook" className="w-6 h-6 hover:scale-105 active:scale-95" /></a>
-                        <a href="https://wa.me/6281282008045"><img src={waIcon} alt="Whatsapp" className="w-6 h-6 hover:scale-105 active:scale-95" /></a>
+                        <a href="https://wa.me/6281282008045" onClick={onVisitWa}><img src={waIcon} alt="Whatsapp" className="w-6 h-6 hover:scale-105 active:scale-95" /></a>
                     </div>
                 </div>
             </div>
@@ -114,7 +126,7 @@ export default function Navbar() {
                             <a href="https://www.instagram.com/beesmart.sm/"><img src={navbarOpacity < 0.5 ? "https://beesmart-sm.vercel.app/static/images/ig.png" : igIcon} alt="Instagram" className="w-6 h-6 hover:scale-105 active:scale-95" /></a>
                             <a href="https://www.tiktok.com/@beesmart.co.id"><img src={navbarOpacity < 0.5 ? "https://beesmart-sm.vercel.app/static/images/tiktok.png" : ttIcon} alt="TikTok" className="w-6 h-6 hover:scale-105 active:scale-95" /></a>
                             <a href="https://www.facebook.com/BeeSmartSolusiMedia/"><img src={navbarOpacity < 0.5 ? "https://beesmart-sm.vercel.app/static/images/fb.png" : fbIcon} alt="Facebook" className="w-6 h-6 hover:scale-105 active:scale-95" /></a>
-                            <a href="https://wa.me/6281282008045"><img src={navbarOpacity < 0.5 ? waIconW : waIcon} alt="Whatsapp" className="w-6 h-6 hover:scale-105 active:scale-95" /></a>
+                            <a href="https://wa.me/6281282008045" onClick={onVisitWa}><img src={navbarOpacity < 0.5 ? waIconW : waIcon} alt="Whatsapp" className="w-6 h-6 hover:scale-105 active:scale-95" /></a>
                         </div>
                     </div>
                     <div className='lg:hidden flex justify-end'>
