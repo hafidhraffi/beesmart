@@ -91,7 +91,7 @@ function DashboardPage() {
                             {
                                 selectedMenu === 'dashboard' ?
                                     <>
-                                        <div className='mx-10 my-5 flex gap-10 flex-wrap'>
+                                        <div className='mx-10 my-5 flex gap-5 flex-wrap'>
                                             {Object.entries(data).map(([item, total], index) => (
                                                 <div
                                                     key={index}
