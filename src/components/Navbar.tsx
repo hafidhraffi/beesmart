@@ -62,6 +62,7 @@ export default function Navbar() {
 
     function onVisitWa() {
         visitWa.mutate()
+        window.open("https://wa.me/6281282008045", "_blank");
     }
 
     return (
@@ -93,7 +94,7 @@ export default function Navbar() {
                         <a href="https://www.instagram.com/beesmart.sm/"><img src={igIcon} alt="Instagram" className="w-6 h-6 hover:scale-105 active:scale-95" /></a>
                         <a href="https://www.tiktok.com/@beesmart.co.id"><img src={ttIcon} alt="TikTok" className="w-6 h-6 hover:scale-105 active:scale-95" /></a>
                         <a href="https://www.facebook.com/BeeSmartSolusiMedia/"><img src={fbIcon} alt="Facebook" className="w-6 h-6 hover:scale-105 active:scale-95" /></a>
-                        <a href="https://wa.me/6281282008045" onClick={onVisitWa}><img src={waIcon} alt="Whatsapp" className="w-6 h-6 hover:scale-105 active:scale-95" /></a>
+                        <div onClick={onVisitWa}><img src={waIcon} alt="Whatsapp" className="w-6 h-6 hover:scale-105 active:scale-95" /></div>
                     </div>
                 </div>
             </div>
@@ -126,7 +127,7 @@ export default function Navbar() {
                             <a href="https://www.instagram.com/beesmart.sm/"><img src={navbarOpacity < 0.5 ? "https://beesmart-sm.vercel.app/static/images/ig.png" : igIcon} alt="Instagram" className="w-6 h-6 hover:scale-105 active:scale-95" /></a>
                             <a href="https://www.tiktok.com/@beesmart.co.id"><img src={navbarOpacity < 0.5 ? "https://beesmart-sm.vercel.app/static/images/tiktok.png" : ttIcon} alt="TikTok" className="w-6 h-6 hover:scale-105 active:scale-95" /></a>
                             <a href="https://www.facebook.com/BeeSmartSolusiMedia/"><img src={navbarOpacity < 0.5 ? "https://beesmart-sm.vercel.app/static/images/fb.png" : fbIcon} alt="Facebook" className="w-6 h-6 hover:scale-105 active:scale-95" /></a>
-                            <a href="https://wa.me/6281282008045" onClick={onVisitWa}><img src={navbarOpacity < 0.5 ? waIconW : waIcon} alt="Whatsapp" className="w-6 h-6 hover:scale-105 active:scale-95" /></a>
+                            <div onClick={onVisitWa}><img src={navbarOpacity < 0.5 ? waIconW : waIcon} alt="Whatsapp" className="w-6 h-6 hover:scale-105 active:scale-95" /></div>
                         </div>
                     </div>
                     <div className='lg:hidden flex justify-end'>
