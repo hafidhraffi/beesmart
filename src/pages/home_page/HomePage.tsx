@@ -40,7 +40,7 @@ function HomePage() {
             <Helmet>
                 <meta charSet="utf-8" />
                 <title>Beesmart - Percetakan Buku, Kalender, dan Majalah Berkualitas</title>
-                <link rel="canonical" href="https://beesmart-gamma.vercel.app/" />
+                <link rel="canonical" href="https://www.beesmart.co.id/" />
                 <meta name="description" content="Beesmart Solusi Media menyediakan layanan percetakan profesional untuk buku, kalender, majalah, dan produk cetak lainnya dengan kualitas terbaik dan layanan terpercaya." />
                 <meta name="keywords" content="Beesmart Solusi Media, percetakan buku, percetakan kalender, percetakan majalah, jasa cetak profesional, percetakan terpercaya" />
             </Helmet>

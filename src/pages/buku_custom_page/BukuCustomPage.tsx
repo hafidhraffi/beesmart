@@ -26,7 +26,7 @@ function BukuCustomPage() {
             <Helmet>
                 <meta charSet="utf-8" />
                 <title>Buku Custom Beesmart - Percetakan Buku Sesuai Keinginan</title>
-                <link rel="canonical" href="https://beesmart-gamma.vercel.app/buku-custom" />
+                <link rel="canonical" href="https://www.beesmart.co.id/buku-custom" />
                 <meta name="description" content="Beesmart Solusi Media menyediakan layanan percetakan buku custom sesuai keinginan Anda. Desain unik, kualitas cetak terbaik, dan layanan profesional untuk buku pribadi, corporate, atau penerbitan skala kecil hingga besar." />
                 <meta name="keywords" content="Beesmart Solusi Media, percetakan buku custom, buku sesuai keinginan, jasa cetak buku, buku personalisasi, percetakan profesional" />
             </Helmet>

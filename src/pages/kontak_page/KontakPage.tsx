@@ -8,7 +8,7 @@ function KontakPage() {
             <Helmet>
                 <meta charSet="utf-8" />
                 <title>Kontak Beesmart - Hubungi Kami untuk Layanan Percetakan</title>
-                <link rel="canonical" href="https://beesmart-gamma.vercel.app/kontak" />
+                <link rel="canonical" href="https://www.beesmart.co.id/kontak" />
                 <meta name="description" content="Hubungi Beesmart Solusi Media, perusahaan percetakan profesional untuk buku, kalender, dan majalah. Isi form pesan, temukan alamat kami, atau lihat lokasi di peta untuk konsultasi dan pemesanan." />
                 <meta name="keywords" content="Beesmart Solusi Media, kontak percetakan, hubungi percetakan, form pesan, alamat percetakan, lokasi perusahaan, percetakan buku, percetakan kalender, percetakan majalah" />
             </Helmet>

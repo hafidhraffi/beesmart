@@ -2,4 +2,4 @@ User-agent: *
 Disallow: /login
 Disallow: /dashboard
 
-Sitemap: https://beesmart-gamma.vercel.app/sitemap.xml
+Sitemap: https://www.beesmart.co.id/sitemap.xml
