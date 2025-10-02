@@ -21,6 +21,9 @@ import ukuran1 from '../../assets/ukuran1.png'
 import ukuran2 from '../../assets/ukuran2.png'
 import ukuran3 from '../../assets/ukuran3.png'
 import { Helmet } from "react-helmet"
+import { useMutation } from "@tanstack/react-query"
+import { useEffect } from "react"
+import api from "../../services/api"
 
 function KalenderPage() {
     const portofolioDinding = [
@@ -92,6 +95,17 @@ function KalenderPage() {
             text: "Dinas Pendidikan Blitar"
         },
     ]
+
+    const visitPage = useMutation({
+        mutationFn: async () => {
+            return await api.post('/visit?layanan=kalender')
+        },
+    })
+
+    useEffect(() => {
+        visitPage.mutate()
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [])
 
     return (
         <>

@@ -18,8 +18,26 @@ import port7 from '../../assets/custom7.png'
 import port8 from '../../assets/custom8.png'
 import ContactForm from '../../components/ContactForm'
 import { Helmet } from "react-helmet"
+import { useMutation } from '@tanstack/react-query'
+import api from '../../services/api'
+import { useEffect } from 'react'
 
 function BukuCustomPage() {
+
+
+    const visitPage = useMutation({
+        mutationFn: async () => {
+            return await api.post('/visit?layanan=buku')
+        },
+        onSuccess: () => {
+            console.log("yeah")
+        }
+    })
+
+    useEffect(() => {
+        visitPage.mutate()
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [])
 
     return (
         <>
