@@ -13,7 +13,7 @@ function KontakPage() {
 
     function onVisitWa() {
         visitWa.mutate()
-        window.open("https://wa.me/6281282008082", "_blank");
+        window.open("https://wa.me/6281282008082?text=Halo%20Beesmart%2C%20saya%20menghubungi%20melalui%20website", "_blank");
     }
 
     return (
