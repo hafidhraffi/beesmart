@@ -13,7 +13,7 @@ function KontakPage() {
 
     function onVisitWa() {
         visitWa.mutate()
-        window.open("https://wa.me/6281282008045", "_blank");
+        window.open("https://wa.me/6281282008082", "_blank");
     }
 
     return (
@@ -36,7 +36,7 @@ function KontakPage() {
                             <div className="grid grid-cols-2">
                                 <div>
                                     <p className="font-bold">Nomor Telepon</p>
-                                    <div onClick={onVisitWa} className="underline">0812-8200-8045</div>
+                                    <div onClick={onVisitWa} className="underline">0812-8200-8082</div>
                                 </div>
                                 <div>
                                     <p className="font-bold">Media Sosial</p>

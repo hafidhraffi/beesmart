@@ -39,7 +39,7 @@ function Footer() {
 
                     <div className="text-left max-w-xs">
                         <h3 className="font-semibold mb-2">Hubungi Kami</h3>
-                        <p>Whatsapp : 0812-8200-8045</p>
+                        <p>Whatsapp : 0812-8200-8082</p>
                         <p>Email : <a href="mailto:beesmartsm@gmail.com" className="underline hover:text-gray-200">beesmartsm@gmail.com</a></p>
                         <div className="flex space-x-4 mt-3">
                             <a href="https://www.instagram.com/beesmart.sm/"><img src="https://beesmart-sm.vercel.app/static/images/ig.png" alt="Instagram" className="w-5 h-5" /></a>

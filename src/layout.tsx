@@ -21,7 +21,7 @@ function Layout() {
 
     function onVisitWa() {
         visitWa.mutate()
-        window.open("https://wa.me/6281282008045", "_blank");
+        window.open("https://wa.me/6281282008082", "_blank");
     }
 
     return (
